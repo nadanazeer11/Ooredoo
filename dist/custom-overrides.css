@@ -220,6 +220,39 @@ section h2:first-child {
   outline: none !important; /* Remove any outline */
 }
 
+#group-results .result-element:nth-child(4),
+#group-results .result-element:nth-child(5),
+#group-results .result-element:nth-child(6) {
+  border-bottom: none !important;
+  border-bottom-width: 0 !important;
+  border-bottom-style: none !important;
+}
+
+/* Single big divider above definitions/footnotes section */
+#group-results .group-results-divider {
+  width: 100% !important;
+  height: 1px !important;
+  background-color: #383838 !important;
+  margin: 0px 10px 20px 10px !important;
+  display: block !important;
+}
+
+/* Add padding above and below footnote text */
+#group-results .footnote {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  margin-bottom: 0 !important;
+}
+
+/* Add margin only to first and last footnotes */
+#group-results .footnote:first-of-type {
+  padding-top: 20px !important;
+}
+
+#group-results .footnote:last-of-type {
+  margin-bottom: 20px !important;
+}
+
 /* Ensure result-years-item doesn't cause overlap issues */
 #group-results .result-years-item {
   position: relative !important;
@@ -281,6 +314,7 @@ section h2:first-child {
   vertical-align: top !important;
 } */
 
+
 /* Result description styling */
 #group-results .result-description {
   font: normal normal normal 12px/16px Rubik !important;
@@ -312,30 +346,4 @@ section h2:first-child {
   justify-content: flex-start !important;
 }
 
-
-
-/* Single big divider above definitions/footnotes section */
-#group-results .group-results-divider {
-  width: 100% !important;
-  height: 1px !important;
-  background-color: #383838 !important;
-  margin: 0px 10px 20px 10px !important;
-  display: block !important;
 }
-
-/* Add padding above and below footnote text */
-#group-results .footnote {
-  padding-top: 2px !important;
-  padding-bottom: 2px !important;
-  margin-bottom: 0 !important;
-}
-
-/* Add margin only to first and last footnotes */
-#group-results .footnote:first-of-type {
-  padding-top: 20px !important;
-}
-
-#group-results .footnote:last-of-type {
-  margin-bottom: 20px !important;
-}
-

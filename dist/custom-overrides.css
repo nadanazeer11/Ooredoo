@@ -312,12 +312,7 @@ section h2:first-child {
   justify-content: flex-start !important;
 }
 
-/* Remove bottom dividers from second row items (4th, 5th, 6th cards) */
-#group-results .result-element:nth-child(4),
-#group-results .result-element:nth-child(5),
-#group-results .result-element:nth-child(6) {
-  border-bottom: none !important;
-}
+
 
 /* Single big divider above definitions/footnotes section */
 #group-results .group-results-divider {

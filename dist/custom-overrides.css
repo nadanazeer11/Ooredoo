@@ -52,10 +52,14 @@ section {
   height: auto !important;
 }
 
-/* Keep hero section unchanged */
+/* Keep hero section unchanged - clip overflow so blob doesn't show above */
 .section-hero {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+  position: relative !important;
+  z-index: 10 !important;
+  overflow: hidden !important;
+  background-color: #FFFFFF !important;
 }
 
 /* Add padding to section titles */
@@ -80,12 +84,93 @@ section h2:first-child {
   justify-content: flex-start !important;
   margin-left: 0 !important;
   padding-left: 0 !important;
+  position: relative !important;
+  overflow: visible !important;
+}
+
+/* Ensure parent containers allow overflow for the blob */
+.introduction-image,
+.introduction-inner,
+.section-introduction .container-big {
+  overflow: visible !important;
 }
 
 .introduction-image .img-content img {
   margin-left: 0 !important;
   padding-left: 0 !important;
   align-self: flex-start !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Red blob behind chairman/CEO image - rectangle + semicircle bottom */
+/* Rectangle part - extends from section top */
+.introduction-image .img-content::before {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  position: absolute !important;
+  top: -183px !important; /* Extend upward to reach the section top */
+  left: 46% !important;
+  transform: translateX(-50%) !important;
+  width: 65% !important;
+  height: 35% !important;
+  background-color: #ED1C24 !important;
+  border-radius: 0 !important; /* Flat rectangle */
+  z-index: 2 !important; /* Above the semicircle so text isn't hidden */
+  font: normal normal bold 28px Outfit !important;
+  letter-spacing: 0px !important;
+  color: #FFFFFF !important;
+  text-transform: uppercase !important;
+  /* padding-top: 120px !important;
+  padding-left: 10px !important;
+  padding-right: 20px !important; */
+  box-sizing: border-box !important;
+  white-space: pre-line !important;
+}
+
+/* Semicircle bottom part - attached below the rectangle */
+.introduction-image .img-content::after {
+  content: '' !important;
+  display: block !important;
+  position: absolute !important;
+  top: calc(-183px + 35%) !important; /* Start where the rectangle ends */
+  left: 46% !important;
+  transform: translateX(-50%) !important;
+  width: 65% !important; /* Same width as the rectangle */
+  height: 100px !important; /* Height of the semicircle */
+  background-color: #ED1C24 !important;
+  border-radius: 0 0 50% 50% / 0 0 100% 100% !important; /* Semicircle bottom */
+  z-index: 1 !important;
+}
+
+/* English blob titles */
+.introduction-image .img-content-1::before {
+  content: "Chairman's\AMessage" !important;
+  padding-top: 70px !important;
+}
+
+.introduction-image .img-content-2::before {
+  content: "CEO's\AMessage" !important;
+  padding-top: 70px !important;
+
+}
+
+/* Arabic blob titles (RTL) */
+[dir="rtl"] .introduction-image .img-content-1::before {
+  content: "رسالة رئيس\Aمجلس الإدارة" !important;
+  padding-top: 70px !important;
+  font: normal normal bold 24px Outfit !important;
+
+
+}
+
+[dir="rtl"] .introduction-image .img-content-2::before {
+  content: "رسالة الرئيس\Aالتنفيذي" !important;
+  padding-top: 70px !important;
+  font: normal normal bold 24px Outfit !important;
+
+
 }
 
 .introduction-image .img-content .name-tag {
@@ -99,6 +184,13 @@ section h2:first-child {
   padding-right: 0 !important;
   align-self: flex-start !important;
   text-align: center !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.introduction-image .img-content .title {
+  position: relative !important;
+  z-index: 2 !important;
 }
 
 /* RTL support for Arabic - mirror name-tag margins */

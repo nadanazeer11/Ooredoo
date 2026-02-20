@@ -1,0 +1,74 @@
+/* ============================================
+   Custom CSS Overrides
+   This file contains all custom styling overrides
+   Add your custom styles here to avoid losing them on rebuild
+   ============================================ */
+
+/* Remove semicircle shapes from sections */
+section,
+section > *,
+.section-introduction,
+.section-group-results,
+.section-strategy,
+.section-markets,
+.section-esg {
+  clip-path: none !important;
+  border-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  mask: none !important;
+  -webkit-mask: none !important;
+}
+
+/* Remove semicircle pseudo-elements */
+section::before,
+section::after,
+.section-introduction::before,
+.section-introduction::after,
+.section-group-results::before,
+.section-group-results::after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  background-image: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Hide arc shape images */
+.arc-shape,
+img[class*="arc"],
+[class*="arc-shape"] {
+  display: none !important;
+}
+
+/* Reduce section heights */
+section {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+  min-height: auto !important;
+  height: auto !important;
+}
+
+/* Keep hero section unchanged */
+.section-hero {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Add padding to section titles */
+.group-results-title,
+.strategy__title,
+.esg-title,
+section h2:first-child {
+  padding-top: 40px !important;
+  margin-top: 0 !important;
+}
+
+.section-introduction h2:first-child,
+.section-introduction .introduction-content-wrapper {
+  padding-top: 40px !important;
+}
+

@@ -19,39 +19,8 @@
   <!--<script is:inline src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>-->
   <link rel="stylesheet" href="./_astro/index.CzsFIt-o.css">
   <link rel="stylesheet" href="./_astro/ar.DTdkVvDS.css">
-  <style>
-    /* Remove semicircle shape from sections */
-    section,
-    section > *,
-    .section-introduction,
-    .section-group-results,
-    .section-strategy,
-    .section-markets,
-    .section-esg {
-      clip-path: none !important;
-      border-radius: 0 !important;
-      border-top-left-radius: 0 !important;
-      border-top-right-radius: 0 !important;
-      border-bottom-left-radius: 0 !important;
-      border-bottom-right-radius: 0 !important;
-      mask: none !important;
-      -webkit-mask: none !important;
-    }
-    section::before,
-    section::after,
-    .section-introduction::before,
-    .section-introduction::after,
-    .section-group-results::before,
-    .section-group-results::after {
-      display: none !important;
-      content: none !important;
-    }
-    .arc-shape,
-    img[class*="arc"],
-    [class*="arc-shape"] {
-      display: none !important;
-    }
-  </style>
+  <!-- Custom overrides - add your custom styles here -->
+  <link rel="stylesheet" href="./custom-overrides.css">
 </head>
 
 <body data-astro-cid-sckkx6r4>
@@ -4814,6 +4783,10 @@
       </div> <!-- END DESKTOP -->
     </section>
     <script type="module" src="./_astro/CountrySection.astro_astro_type_script_index_0_lang.AMHuOZMk.js"></script>
+    <!-- ESG Section Placeholder - Content loaded from sections/esg-section.html -->
+    <div id="esg-placeholder"></div>
+    <!-- Original ESG section removed - now in sections/esg-section.html -->
+    <!--
     <section id="esg" class="section-esg aos-init is-visible" data-astro-cid-3vxyu3eo>
       <div class="container-big" data-astro-cid-3vxyu3eo>
         <div class="esg-wrapper" data-astro-cid-3vxyu3eo>
@@ -5006,7 +4979,9 @@
         </div>
       </footer>
     </section>
+    -->
   </div>
+  <script src="./scripts/load-sections.js"></script>
   <script type="module" src="./_astro/Layout.astro_astro_type_script_index_0_lang.D8J2vXsO.js"></script>
 </body>
 

@@ -1,0 +1,158 @@
+<style>
+  #esg.section-esg {
+    background-color: #68C0B5 !important;
+  }
+  #esg .cards__element {
+    transition: background-color 0.3s ease;
+    overflow: hidden !important;
+    border-radius: 8px !important;
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  #esg .cards__element.is-open .cards__element-content,
+  #esg .cards__element:hover .cards__element-content {
+    overflow: visible !important;
+    height: auto !important;
+  }
+  #esg .cards__element:hover {
+    background-color: #CCE5E0 !important;
+  }
+  #esg .cards__element.is-open {
+    background-color: #CCE5E0 !important;
+  }
+  /* Ensure content area fills the card and matches background */
+  #esg .cards__element.is-open .cards__element-content,
+  #esg .cards__element:hover .cards__element-content {
+    background-color: #CCE5E0 !important;
+    min-height: 100% !important;
+    flex: 1 !important;
+  }
+  #esg .cards__element ul,
+  #esg .cards__element-content ul {
+    list-style: none !important;
+    list-style-type: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+  }
+  #esg .cards__element li,
+  #esg .cards__element-content li {
+    font: normal normal normal 16px/20px Rubik !important;
+    list-style: none !important;
+    list-style-type: none !important;
+    display: block !important;
+  }
+  #esg .cards__element li::before,
+  #esg .cards__element-content li::before {
+    content: none !important;
+  }
+  #esg .cards__element-content--title {
+    font: normal normal bold 22px/27px Rubik !important;
+  }
+  /* Smaller title when card is open/flipped */
+  #esg .cards__element.is-open .cards__element-content--title,
+  #esg .cards__element:hover .cards__element-content--title {
+    font: normal normal bold 18px/22px Rubik !important;
+  }
+  /* Ensure content fits when card is open */
+  #esg .cards__element.is-open .cards__element-content,
+  #esg .cards__element:hover .cards__element-content {
+    padding: 10px 15px 20px 15px !important;
+    max-height: none !important;
+  }
+  #esg .esg-title {
+    font: normal normal bold 34px/41px Rubik !important;
+  }
+  /* Red blob for icons at top of card */
+  #esg .cards__element-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0 !important;
+  }
+  #esg .cards__element-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 60px;
+    background-color: #E31E24;
+    border-radius: 0 0 60px 60px;
+    z-index: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  #esg .cards__element-title .icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px !important;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  #esg .cards__element-title .icon-default {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  #esg .cards__element-title .icon-hover {
+    display: none;
+  }
+  #esg .cards__element-title .icon img {
+    position: relative;
+    z-index: 2;
+    filter: brightness(0) invert(1);
+    display: block;
+    width: 50px !important;
+    height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto;
+  }
+  #esg .cards__element-title h4 {
+    font: normal normal bold 20px/24px Rubik !important;
+    margin-top: 0 !important;
+  }
+  /* Footer background override */
+  #esg footer {
+    background-color: #68C0B5 !important;
+  }
+  #esg .section-cta-download {
+    background-color: transparent !important;
+  }
+  #esg footer .container {
+    background-color: transparent !important;
+  }
+</style>
+<section id="esg" class="section-esg aos-init is-visible" data-astro-cid-af3xrggj> <div class="container-big" data-astro-cid-af3xrggj> <div class="esg-wrapper" data-astro-cid-af3xrggj> <div class="esg-inner" data-astro-cid-af3xrggj> <div class="esg-content" data-astro-cid-af3xrggj> <h2 class="esg-title aos-init" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-astro-cid-af3xrggj>
+تركز استراتيجيتنا على خمسة ركائز استراتيجية رئيسية:
+</h2> </div> </div> <div class="cards aos-init" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-astro-cid-af3xrggj> <div class="cards__list" data-astro-cid-af3xrggj> <div class="cards__element aos-init" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-astro-cid-af3xrggj> <div class="chevron" data-astro-cid-af3xrggj> <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" data-astro-cid-af3xrggj> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#000000" data-astro-cid-af3xrggj></path> </svg> </div> <div class="cards__element-title" data-astro-cid-af3xrggj> <span class="icon icon-default" data-astro-cid-af3xrggj> <img src="../_astro/icon-environment.DIelPSaW.svg" alt="حماية بيئتنا" width="84" height="84" loading="lazy" decoding="async" data-astro-cid-af3xrggj> </span> <span class="icon icon-hover" data-astro-cid-af3xrggj> <img src="../_astro/icon-environment-white.BZzzMGwr.png" alt="حماية بيئتنا" width="84" height="84" loading="lazy" decoding="async" data-astro-cid-af3xrggj> </span> <h4 data-astro-cid-af3xrggj>حماية بيئتنا</h4> </div> <div class="cards__element-content" data-astro-cid-af3xrggj> <p class="cards__element-content--title" data-astro-cid-af3xrggj>
+حماية بيئتنا
+</p> <p data-astro-cid-af3xrggj></p> <ul data-astro-cid-af3xrggj> <li data-astro-cid-af3xrggj>المناخ والطاقة</li> <li data-astro-cid-af3xrggj>إدارة الموارد</li> </ul> <p data-astro-cid-af3xrggj></p> </div> </div> <div class="cards__element aos-init" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-astro-cid-af3xrggj> <div class="chevron" data-astro-cid-af3xrggj> <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" data-astro-cid-af3xrggj> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#000000" data-astro-cid-af3xrggj></path> </svg> </div> <div class="cards__element-title" data-astro-cid-af3xrggj> <span class="icon icon-default trik" data-astro-cid-af3xrggj> <img src="../_astro/icon-teal.as7KLFIW.svg" alt="تطوير كوادرنا البشرية" width="60" height="60" loading="lazy" decoding="async" data-astro-cid-af3xrggj> </span> <span class="icon icon-hover" data-astro-cid-af3xrggj> <img src="../_astro/icon-white.C5F4svaV.svg" alt="تطوير كوادرنا البشرية" width="60" height="60" loading="lazy" decoding="async" data-astro-cid-af3xrggj> </span> <h4 data-astro-cid-af3xrggj>تطوير موظفينا</h4> </div> <div class="cards__element-content" data-astro-cid-af3xrggj> <p class="cards__element-content--title" data-astro-cid-af3xrggj>
+تطوير موظفينا
+</p> <p data-astro-cid-af3xrggj></p> <ul data-astro-cid-af3xrggj> <li data-astro-cid-af3xrggj>استقطاب أصحاب المواهب والاحتفاظ بهم</li> <li data-astro-cid-af3xrggj>تكافؤ الفرص</li> <li data-astro-cid-af3xrggj>الصحة والسلامة</li> </ul> <p data-astro-cid-af3xrggj></p> </div> </div> <div class="cards__element aos-init" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-astro-cid-af3xrggj> <div class="chevron" data-astro-cid-af3xrggj> <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" data-astro-cid-af3xrggj> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#000000" data-astro-cid-af3xrggj></path> </svg> </div> <div class="cards__element-title" data-astro-cid-af3xrggj> <span class="icon icon-default" data-astro-cid-af3xrggj> <img src="../_astro/icon-legal.CnAVC9N0.svg" alt="حماية عملائنا" width="84" height="84" loading="lazy" decoding="async" data-astro-cid-af3xrggj> </span> <span class="icon icon-hover" data-astro-cid-af3xrggj> <img src="../_astro/icon-legal-white.DnonJvVw.png" alt="حماية عملائنا" width="84" height="84" loading="lazy" decoding="async" data-astro-cid-af3xrggj> </span> <h4 data-astro-cid-af3xrggj>المحافظة على عملائنا</h4> </div> <div class="cards__element-content" data-astro-cid-af3xrggj> <p class="cards__element-content--title" data-astro-cid-af3xrggj>
+المحافظة على عملائنا
+</p> <p data-astro-cid-af3xrggj></p> <ul data-astro-cid-af3xrggj> <li data-astro-cid-af3xrggj>مسؤولية العملاء</li> <li data-astro-cid-af3xrggj>خصوصية البيانات والأمن</li> </ul> <p data-astro-cid-af3xrggj></p> </div> </div> <div class="cards__element aos-init" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700" data-astro-cid-af3xrggj> <div class="chevron" data-astro-cid-af3xrggj> <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" data-astro-cid-af3xrggj> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#000000" data-astro-cid-af3xrggj></path> </svg> </div> <div class="cards__element-title" data-astro-cid-af3xrggj> <span class="icon icon-default" data-astro-cid-af3xrggj> <img src="../_astro/icon-culture.pCaPta8o.svg" alt="إيجاد فرص اقتصادية أخلاقية" width="84" height="84" loading="lazy" decoding="async" data-astro-cid-af3xrggj> </span> <span class="icon icon-hover" data-astro-cid-af3xrggj> <img src="../_astro/icon-culture-white.D2ozBzbg.png" alt="إيجاد فرص اقتصادية أخلاقية" width="84" height="84" loading="lazy" decoding="async" data-astro-cid-af3xrggj> </span> <h4 data-astro-cid-af3xrggj>إيجاد فرص اقتصادية أخلاقية</h4> </div> <div class="cards__element-content" data-astro-cid-af3xrggj> <p class="cards__element-content--title" data-astro-cid-af3xrggj>
+إيجاد فرص اقتصادية أخلاقية
+</p> <p data-astro-cid-af3xrggj></p> <ul data-astro-cid-af3xrggj> <li data-astro-cid-af3xrggj>الحوكمة والأخلاقيات</li> <li data-astro-cid-af3xrggj>إدارة المخاطر</li> <li data-astro-cid-af3xrggj>الإنسان</li> <li data-astro-cid-af3xrggj>سلسلة توريد مسؤولة</li> </ul> <p data-astro-cid-af3xrggj></p> </div> </div> <div class="cards__element aos-init" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900" data-astro-cid-af3xrggj> <div class="chevron" data-astro-cid-af3xrggj> <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg" data-astro-cid-af3xrggj> <path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#000000" data-astro-cid-af3xrggj></path> </svg> </div> <div class="cards__element-title" data-astro-cid-af3xrggj> <span class="icon icon-default" data-astro-cid-af3xrggj> <img src="../_astro/icon-mergers.CTsbgBuy.svg" alt="الإثراء الرقمي والرعاية المجتمعية" width="84" height="84" loading="lazy" decoding="async" data-astro-cid-af3xrggj> </span> <span class="icon icon-hover" data-astro-cid-af3xrggj> <img src="../_astro/icon-mergers-white.BUwOGI_k.png" alt="الإثراء الرقمي والرعاية المجتمعية" width="84" height="84" loading="lazy" decoding="async" data-astro-cid-af3xrggj> </span> <h4 data-astro-cid-af3xrggj>الإثراء الرقمي والرعاية المجتمعية</h4> </div> <div class="cards__element-content" data-astro-cid-af3xrggj> <p class="cards__element-content--title" data-astro-cid-af3xrggj>
+الإثراء الرقمي والرعاية المجتمعية
+</p> <p data-astro-cid-af3xrggj></p> <ul data-astro-cid-af3xrggj> <li data-astro-cid-af3xrggj>الشمول الرقمي والابتكار</li> <li data-astro-cid-af3xrggj>إيجاد القيمة الاجتماعية</li> </ul> <p data-astro-cid-af3xrggj></p> </div> </div> </div> </div> </div> </div> <footer data-astro-cid-k6ksr5xi> <div class="container" data-astro-cid-k6ksr5xi> <div class="section-cta-download aos-init" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-astro-cid-k6ksr5xi><a target="_blank" download="" href="../pdfs/Ooredoo_Annual-Report_2025_Arabic.pdf" class="cta-download" data-astro-cid-k6ksr5xi>تحميل التقرير السنوي 2025</a></div> <div class="section-social aos-init" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-astro-cid-k6ksr5xi> <!--<ul >--> <!--    <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" --> <!--        class="aos-init"><a href="https://www.facebook.com/ooredoogroup/" target="_blank"--> <!--                            ><img--> <!--            src={iconFacebook.src} alt=""--> <!--             width="24" height="24" loading="lazy" decoding="async"></a></li>--> <!--    <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" --> <!--        class="aos-init"><a--> <!--            href="https://www.linkedin.com/company/2973491?trk=tyah&amp;trkInfo=clickedVertical:company,clickedEntityId:2973491,idx:2-2-5,tarId:1445934075901,tas:ooredoo"--> <!--            target="_blank" ><img--> <!--            src={iconLinkedin.src} alt=""--> <!--             width="24" height="24" loading="lazy" decoding="async"></a></li>--> <!--    <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" --> <!--        class="aos-init"><a href="https://twitter.com/ooredoo" target="_blank"--> <!--                            ><img--> <!--            src={iconX.src} alt=""--> <!--             width="24" height="24" loading="lazy" decoding="async"></a></li>--> <!--</ul>--> </div> </div> </footer> </section>
+

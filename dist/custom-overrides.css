@@ -117,7 +117,7 @@ section h2:first-child {
   height: 35% !important;
   background-color: #ED1C24 !important;
   border-radius: 0 !important; /* Flat rectangle */
-  z-index: 2 !important; /* Above the semicircle so text isn't hidden */
+  z-index: 1 !important;
   font: normal normal bold 28px Outfit !important;
   letter-spacing: 0px !important;
   color: #FFFFFF !important;

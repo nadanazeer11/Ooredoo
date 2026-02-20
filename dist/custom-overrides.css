@@ -87,6 +87,11 @@ section h2:first-child {
   .section-strategy[data-astro-cid-hdqzsiq5] {
     margin-bottom: 0 !important;
   }
+  
+  /* Remove margin-bottom from Arabic version strategy section */
+  [dir="rtl"] .section-strategy[data-astro-cid-ouj4kmdo] {
+    margin-bottom: 0 !important;
+  }
 }
 
 /* Increase top and bottom padding for strategy section */

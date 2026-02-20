@@ -72,6 +72,54 @@ section h2:first-child {
   padding-top: 40px !important;
 }
 
+/* Make name-tag red div span full width of image and remove extending lines */
+.introduction-image .img-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+.introduction-image .img-content img {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  align-self: flex-start !important;
+}
+
+.introduction-image .img-content .name-tag {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block !important;
+  box-sizing: border-box !important;
+  margin-left: -35px !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  align-self: flex-start !important;
+  text-align: center !important;
+}
+
+/* RTL support for Arabic - mirror name-tag margins */
+[dir="rtl"] .introduction-image .img-content .name-tag {
+  margin-left: 0 !important;
+  margin-right: -35px !important;
+}
+
+/* Remove extending lines from red-line pseudo-elements */
+.introduction-image .img-content .red-line::before,
+.introduction-image .img-content .red-line::after {
+  display: none !important;
+  content: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.introduction-image .img-content .red-line {
+  display: none !important;
+}
+
 /* Strategy section - increase title div height and remove icons */
 #our-strategy .cards-inner {
   min-height: 120px !important;
@@ -85,11 +133,6 @@ section h2:first-child {
 /* Remove margin-bottom from strategy section at 1023px breakpoint */
 @media only screen and (min-width: 1023px) {
   .section-strategy[data-astro-cid-hdqzsiq5] {
-    margin-bottom: 0 !important;
-  }
-  
-  /* Remove margin-bottom from Arabic version strategy section */
-  [dir="rtl"] .section-strategy[data-astro-cid-ouj4kmdo] {
     margin-bottom: 0 !important;
   }
 }

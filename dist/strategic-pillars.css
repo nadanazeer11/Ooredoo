@@ -1,20 +1,23 @@
 /* Strategic Pillars Section */
 .section-strategic-pillars {
   background-color: #68C0B5;
-  padding: 60px 20px 80px;
+  /* padding: 80px 30px 80px; */
   font-family: 'Outfit', sans-serif;
 }
 
 .section-strategic-pillars .sp-container {
   max-width: 1200px;
   margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 .section-strategic-pillars .sp-heading {
-  font-size: 28px;
+  font-size: 35px;
   font-weight: 700;
   color: #000;
   margin-bottom: 40px;
+  /* padding-inline-start: 50px; */
 }
 
 /* Cards grid */
@@ -44,6 +47,33 @@
   transition: background-color 0.4s ease;
 }
 
+/* Red blob - rectangle from top + semicircle bottom */
+.section-strategic-pillars .sp-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55%;
+  height: 20px;
+  background-color: #ED1C24;
+  border-radius: 0;
+  z-index: 0;
+}
+
+.section-strategic-pillars .sp-card::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55%;
+  height: 48px;
+  background-color: #ED1C24;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  z-index: 0;
+}
+
 /* Default view: icon + title */
 .section-strategic-pillars .sp-card-default {
   display: flex;
@@ -53,25 +83,29 @@
   gap: 16px;
   transition: opacity 0.35s ease, transform 0.35s ease;
   z-index: 1;
+  width: 100%;
+  padding-top: 10px;
 }
 
 .section-strategic-pillars .sp-card-default .sp-icon {
-  position: relative;
-  
-  width: 72px;
-  height: 72px;
-  background-color: #ED1C24;
-  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
+  /* background-color: #68C0B5; */
+  z-index: 2;
+  top:3px;
+  /* margin-top: 15px; */
 }
 
 .section-strategic-pillars .sp-card-default .sp-icon img {
   width: 40px;
   height: 40px;
   object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .section-strategic-pillars .sp-card-default .sp-card-title {
@@ -200,4 +234,16 @@
 [dir="rtl"] .section-strategic-pillars .sp-card-overlay ul li::before {
   left: auto;
   right: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .section-strategic-pillars .sp-container {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  .section-strategic-pillars .sp-heading {
+    font-size:30px;
+    padding-inline-start: 10px;
+  }
 }

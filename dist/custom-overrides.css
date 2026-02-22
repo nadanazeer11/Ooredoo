@@ -76,6 +76,10 @@ section h2:first-child {
   padding-top: 40px !important;
 }
 
+.section-introduction {
+  padding-bottom: 110px !important;
+}
+
 /* Make name-tag red div span full width of image and remove extending lines */
 .introduction-image .img-content {
   display: flex !important;
@@ -86,6 +90,7 @@ section h2:first-child {
   padding-left: 0 !important;
   position: relative !important;
   overflow: visible !important;
+  width: 100% !important;
 }
 
 /* Ensure parent containers allow overflow for the blob */
@@ -103,6 +108,7 @@ section h2:first-child {
   z-index: 2 !important;
 }
 
+/* BLOB START =========================================================================================================== */
 /* Red blob behind chairman/CEO image - rectangle + semicircle bottom */
 /* Rectangle part - extends from section top */
 .introduction-image .img-content::before {
@@ -111,7 +117,7 @@ section h2:first-child {
   justify-content: flex-start !important;
   position: absolute !important;
   top: -183px !important; 
-  left: 46% !important;
+  left: 36% !important;
   transform: translateX(-50%) !important;
   width: 65% !important;
   height: 35% !important;
@@ -134,7 +140,7 @@ section h2:first-child {
   display: block !important;
   position: absolute !important;
   top: calc(-183px + 35%) !important; /* Start where the rectangle ends */
-  left: 46% !important;
+  left: 36% !important;
   transform: translateX(-50%) !important;
   width: 65% !important; /* Same width as the rectangle */
   height: 100px !important; /* Height of the semicircle */
@@ -177,14 +183,15 @@ section h2:first-child {
 
 
 }
+/* BLOB END =========================================================================================================== */
 
-// Name of the chairman/CEO red div
+/* Name of the chairman/CEO red div */
 .introduction-image .img-content .name-tag {
   width: 100% !important;
   max-width: 100% !important;
   display: block !important;
   box-sizing: border-box !important;
-  margin-left: -35px !important;
+  margin-left: -45px !important;
   margin-right: 0 !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -192,11 +199,22 @@ section h2:first-child {
   text-align: center !important;
   position: relative !important;
   z-index: 3 !important;
+  margin-top:-25px !important;
 }
 
 .introduction-image .img-content .title {
   position: relative !important;
   z-index: 2 !important;
+}
+
+/* Chairman title text */
+.introduction-image .img-content-1 .title {
+  margin-top:-20px !important;
+}
+
+/* CEO title text */
+.introduction-image .img-content-2 .title {
+  margin-top:-20px !important;
 }
 
 /* RTL support for Arabic - mirror name-tag margins */

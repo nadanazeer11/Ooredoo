@@ -1,0 +1,203 @@
+/* Strategic Pillars Section */
+.section-strategic-pillars {
+  background-color: #68C0B5;
+  padding: 60px 20px 80px;
+  font-family: 'Outfit', sans-serif;
+}
+
+.section-strategic-pillars .sp-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-strategic-pillars .sp-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+/* Cards grid */
+.section-strategic-pillars .sp-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Individual card */
+.section-strategic-pillars .sp-card {
+  position: relative;
+  width: 200px;
+  height: 240px;
+  border-radius: 32px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+/* Default view: icon + title */
+.section-strategic-pillars .sp-card-default {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  z-index: 1;
+}
+
+.section-strategic-pillars .sp-card-default .sp-icon {
+  position: relative;
+  
+  width: 72px;
+  height: 72px;
+  background-color: #ED1C24;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.section-strategic-pillars .sp-card-default .sp-icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.section-strategic-pillars .sp-card-default .sp-card-title {
+  color: #000;
+  line-height: 1.3;
+  font: normal normal bold 16px Rubik;
+
+}
+
+/* Hover overlay: title + list */
+.section-strategic-pillars .sp-card-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 32px;
+  background-color: #CCE5E0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 28px 24px;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  z-index: 2;
+}
+
+.section-strategic-pillars .sp-card-overlay .sp-overlay-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.section-strategic-pillars .sp-card-overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section-strategic-pillars .sp-card-overlay ul li {
+  font: normal normal normal 16px Rubik;
+  color: #333;
+  padding: 4px 0;
+  position: relative;
+  /* padding-left: 14px; */
+}
+
+.section-strategic-pillars .sp-card-overlay ul li::before {
+  content: none;
+}
+
+/* Hover transitions */
+.section-strategic-pillars .sp-card:hover {
+  background-color: #CCE5E0;
+}
+
+.section-strategic-pillars .sp-card:hover .sp-card-default {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.section-strategic-pillars .sp-card:hover .sp-card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Download button - matching site's cta-download */
+.section-strategic-pillars .sp-download-wrapper {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.section-strategic-pillars .sp-download-wrapper .cta-download {
+  position: relative;
+  display: inline-block;
+  width: auto;
+  padding: 12px 72px 12px 24px;
+  background-color: #ED1C24;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  border-radius: 24px;
+  transition: all 0.3s ease;
+  transition-property: color, background;
+  background-image: url(./_astro/icon-download.BMEtM_pU.png);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: right 24px center;
+  text-decoration: none;
+}
+
+.section-strategic-pillars .sp-download-wrapper .cta-download:hover {
+  box-shadow: #00000029 0 3px 6px;
+  background-color: #fff;
+  color: #ED1C24;
+  background-image: url(./_astro/icon-download-red.DdborcV-.png);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: right 24px center;
+}
+
+/* RTL download button - arrow on left */
+[dir="rtl"] .section-strategic-pillars .sp-download-wrapper .cta-download {
+  padding: 12px 24px 12px 72px;
+  background-position: left 24px center;
+}
+
+[dir="rtl"] .section-strategic-pillars .sp-download-wrapper .cta-download:hover {
+  background-position: left 24px center;
+}
+
+/* RTL support */
+[dir="rtl"] .section-strategic-pillars .sp-card-overlay {
+  align-items: center;
+  text-align: center;
+}
+
+[dir="rtl"] .section-strategic-pillars .sp-card-overlay ul li {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+[dir="rtl"] .section-strategic-pillars .sp-card-overlay ul li::before {
+  left: auto;
+  right: 0;
+}

@@ -22,6 +22,7 @@
   <!-- Custom overrides - add your custom styles here -->
   <link rel="stylesheet" href="./custom-overrides.css">
   <link rel="stylesheet" href="./strategic-pillars.css">
+  <link rel="stylesheet" href="./strategic-pillars-mobile.css">
 </head>
 
 <body data-astro-cid-sckkx6r4>
@@ -4786,8 +4787,8 @@
     <script type="module" src="./_astro/CountrySection.astro_astro_type_script_index_0_lang.AMHuOZMk.js"></script>
     <!-- ESG Section Placeholder - Content loaded from sections/esg-section.html -->
     
-  <!-- Strategic Pillars Section -->
-  <section id="strategic-pillars" class="section-strategic-pillars aos-init" data-aos="fade-up" data-aos-duration="1000">
+  <!-- Strategic Pillars Section (desktop only) -->
+  <section id="strategic-pillars" class="section-strategic-pillars sp-desktop-only aos-init" data-aos="fade-up" data-aos-duration="1000">
     <div class="sp-container">
       <h2 class="sp-heading">Our strategy focuses on five key strategic pillars:</h2>
       <div class="sp-cards">
@@ -4878,6 +4879,86 @@
       </div>
       <div class="sp-download-wrapper">
         <a target="_blank" download="" href="pdfs/Ooredoo_Annual-Report_2025_English.pdf" class="cta-download">Download Annual Report 2025</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strategic Pillars Mobile (accordion, mobile only) -->
+  <section id="strategic-pillars-mobile" class="strategic-pillars-mobile" aria-label="Strategic pillars">
+    <div class="spm-container">
+      <h2 class="spm-heading">Our strategy focuses on five key strategic pillars:</h2>
+      <div class="spm-accordions">
+        <details class="spm-item">
+          <summary class="spm-summary">
+            <span class="spm-icon"></span>
+            <span class="spm-title">Protecting Our Environment</span>
+            <span class="spm-chevron"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="currentColor"/></svg></span>
+          </summary>
+          <div class="spm-content">
+            <ul>
+              <li>Climate and energy</li>
+              <li>Resource management</li>
+            </ul>
+          </div>
+        </details>
+        <details class="spm-item">
+          <summary class="spm-summary">
+            <span class="spm-icon"></span>
+            <span class="spm-title">Developing Our People</span>
+            <span class="spm-chevron"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="currentColor"/></svg></span>
+          </summary>
+          <div class="spm-content">
+            <ul>
+              <li>Talent attraction and retention</li>
+              <li>Equal opportunities</li>
+              <li>Health &amp; safety</li>
+            </ul>
+          </div>
+        </details>
+        <details class="spm-item">
+          <summary class="spm-summary">
+            <span class="spm-icon"></span>
+            <span class="spm-title">Safeguarding Our Customers</span>
+            <span class="spm-chevron"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="currentColor"/></svg></span>
+          </summary>
+          <div class="spm-content">
+            <ul>
+              <li>Customer responsibility</li>
+              <li>Data privacy &amp; security</li>
+            </ul>
+          </div>
+        </details>
+        <details class="spm-item">
+          <summary class="spm-summary">
+            <span class="spm-icon"></span>
+            <span class="spm-title">Creating Ethical Economic Opportunity</span>
+            <span class="spm-chevron"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="currentColor"/></svg></span>
+          </summary>
+          <div class="spm-content">
+            <ul>
+              <li>Governance &amp; ethics</li>
+              <li>Risk management</li>
+              <li>Human rights</li>
+              <li>Responsible supply chain</li>
+            </ul>
+          </div>
+        </details>
+        <details class="spm-item">
+          <summary class="spm-summary">
+            <span class="spm-icon"></span>
+            <span class="spm-title">Digital Opportunities and Community Care</span>
+            <span class="spm-chevron"><svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="currentColor"/></svg></span>
+          </summary>
+          <div class="spm-content">
+            <ul>
+              <li>Digital inclusion &amp; innovation</li>
+              <li>Social value creation</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+      <div class="spm-download">
+        <a target="_blank" download="" href="pdfs/Ooredoo_Annual-Report_2025_English.pdf" class="spm-cta">Download Annual Report 2025</a>
       </div>
     </div>
   </section>

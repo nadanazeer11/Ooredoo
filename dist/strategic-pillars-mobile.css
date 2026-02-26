@@ -1,0 +1,219 @@
+/* Strategic Pillars – Mobile only (accordion section) */
+
+.strategic-pillars-mobile {
+  display: none;
+  font-family: 'Outfit', 'Rubik', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .strategic-pillars-mobile {
+    display: block;
+    background-color: #68C0B5;
+    padding: 24px 15px 32px;
+  }
+
+  .strategic-pillars-mobile .spm-container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .strategic-pillars-mobile .spm-heading {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 20px 0;
+    line-height: 1.25;
+  }
+
+  .strategic-pillars-mobile .spm-accordions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* One accordion item */
+  .strategic-pillars-mobile .spm-item {
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .strategic-pillars-mobile .spm-item[open] {
+    background: #CCE5E0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  /* Summary row: closed = white, icon #CCE5E0, title black */
+  .strategic-pillars-mobile .spm-summary {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 14px;
+    list-style: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+  }
+
+  .strategic-pillars-mobile .spm-summary::-webkit-details-marker,
+  .strategic-pillars-mobile .spm-summary::marker {
+    display: none;
+  }
+
+  /* Icon: exact #CCE5E0 when closed, white when open. Paths relative to this CSS file so they work on both / and /ar/ */
+  .strategic-pillars-mobile .spm-icon {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background-color: #68C0B5;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    transition: background-color 0.25s ease;
+  }
+
+  .strategic-pillars-mobile .spm-item:nth-child(1) .spm-icon {
+    -webkit-mask-image: url('./_astro/icon-environment-white.BZzzMGwr.png');
+    mask-image: url('./_astro/icon-environment-white.BZzzMGwr.png');
+  }
+  .strategic-pillars-mobile .spm-item:nth-child(2) .spm-icon {
+    -webkit-mask-image: url('./_astro/icon-white.C5F4svaV.svg');
+    mask-image: url('./_astro/icon-white.C5F4svaV.svg');
+  }
+  .strategic-pillars-mobile .spm-item:nth-child(3) .spm-icon {
+    -webkit-mask-image: url('./_astro/icon-legal-white.DnonJvVw.png');
+    mask-image: url('./_astro/icon-legal-white.DnonJvVw.png');
+  }
+  .strategic-pillars-mobile .spm-item:nth-child(4) .spm-icon {
+    -webkit-mask-image: url('./_astro/icon-culture-white.D2ozBzbg.png');
+    mask-image: url('./_astro/icon-culture-white.D2ozBzbg.png');
+  }
+  .strategic-pillars-mobile .spm-item:nth-child(5) .spm-icon {
+    -webkit-mask-image: url('./_astro/icon-mergers-white.BUwOGI_k.png');
+    mask-image: url('./_astro/icon-mergers-white.BUwOGI_k.png');
+  }
+
+  .strategic-pillars-mobile .spm-item[open] .spm-icon {
+    background-color: #fff;
+  }
+
+  .strategic-pillars-mobile .spm-title {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: start;
+    line-height: 1.3;
+    transition: color 0.25s ease;
+  }
+
+  .strategic-pillars-mobile .spm-item[open] .spm-title {
+    color: #1a1a1a;
+  }
+
+  /* Chevron – same SVG as section above, with color switch */
+  .strategic-pillars-mobile .spm-chevron {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 8px;
+    color: #68C0B5;
+    transition: transform 0.3s ease, color 0.25s ease;
+  }
+
+  .strategic-pillars-mobile .spm-chevron svg {
+    display: block;
+    width: 14px;
+    height: 8px;
+  }
+
+  .strategic-pillars-mobile .spm-item[open] .spm-chevron {
+    transform: rotate(180deg);
+    color: #fff;
+  }
+
+  /* Content: smooth height via grid trick */
+  .strategic-pillars-mobile .spm-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s ease-out;
+  }
+
+  .strategic-pillars-mobile .spm-item[open] .spm-content {
+    grid-template-rows: 1fr;
+  }
+
+  /* Content aligns below title (same line as icon row): 50px = icon width + gap */
+  .strategic-pillars-mobile .spm-content > ul {
+    min-height: 0;
+    overflow: hidden;
+    list-style: disc;
+    margin: 0;
+    padding-block: 0 16px;
+    padding-inline-start: 38px;
+    padding-inline-end: 14px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    text-align: start;
+  }
+
+  .strategic-pillars-mobile .spm-content li {
+    padding: 0px 0;
+    padding-inline-start: 8px;
+  }
+
+  /* Download button */
+  .strategic-pillars-mobile .spm-download {
+    text-align: center;
+    margin-top: 28px;
+  }
+
+  .strategic-pillars-mobile .spm-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ED1C24;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 24px;
+    border-radius: 24px;
+    text-decoration: none;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    padding: 12px 24px;
+  }
+
+  .strategic-pillars-mobile .spm-cta::after {
+    content: '';
+    display: block;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background: url(./_astro/icon-download.BMEtM_pU.png) no-repeat center;
+    background-size: 24px 24px;
+    transition: background 0.25s ease;
+  }
+
+  .strategic-pillars-mobile .spm-cta:hover {
+    background-color: #fff;
+    color: #ED1C24;
+  }
+
+  .strategic-pillars-mobile .spm-cta:hover::after {
+    background-image: url(./_astro/icon-download-red.DdborcV-.png);
+  }
+
+  [dir="rtl"] .strategic-pillars-mobile .spm-cta {
+    flex-direction: row-reverse;
+  }
+}

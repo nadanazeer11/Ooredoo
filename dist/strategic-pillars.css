@@ -17,7 +17,7 @@
   font-weight: 700;
   color: #000;
   margin-bottom: 40px;
-  /* padding-inline-start: 50px; */
+  padding-inline-start: 50px;
 }
 
 /* Cards grid */
@@ -236,14 +236,21 @@
   right: 0;
 }
 
-/* Mobile */
+/* Desktop only: hide this section on mobile (mobile has its own section) */
+@media (max-width: 768px) {
+  .section-strategic-pillars.sp-desktop-only {
+    display: none !important;
+  }
+}
+
+/* Mobile tweaks for desktop section (when visible on larger screens) */
 @media (max-width: 768px) {
   .section-strategic-pillars .sp-container {
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 10px;
   }
   .section-strategic-pillars .sp-heading {
-    font-size:30px;
+    font-size: 30px;
     padding-inline-start: 10px;
   }
 }

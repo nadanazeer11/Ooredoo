@@ -248,7 +248,8 @@ section h2:first-child {
 
 /* Remove margin-bottom from strategy section at 1023px breakpoint */
 @media only screen and (min-width: 1023px) {
-  .section-strategy[data-astro-cid-hdqzsiq5] {
+  .section-strategy[data-astro-cid-hdqzsiq5],
+  .section-strategy[data-astro-cid-ouj4kmdo] {
     margin-bottom: 0 !important;
   }
 }

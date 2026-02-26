@@ -402,11 +402,12 @@ section h2:first-child {
   display: block !important;
 }
 
-/* Add padding above and below footnote text */
+/* Add padding above and below footnote text; align with divider (same horizontal line) */
 #group-results .footnote {
   padding-top: 2px !important;
   padding-bottom: 2px !important;
   margin-bottom: 0 !important;
+  margin-inline: 10px !important;
 }
 
 /* Add margin only to first and last footnotes */

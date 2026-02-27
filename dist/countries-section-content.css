@@ -185,7 +185,7 @@
 
 }
 
-/* Paragraph – centered, limited width */
+/* Paragraph – centered, limited width. Force dark text (Oman/Tunisia use --textColor:#fff). */
 .markets-content .market-content-left .market-content-left-paragraph,
 .markets-content .market-content-left p.mt-3 {
   position: relative !important;
@@ -195,6 +195,7 @@
   text-align: start !important;
   line-height: 1.5 !important;
   margin-bottom: 0 !important;
+  color: #000000 !important;
 }
 
 /* Hide old content-info when hero structure exists (no duplicate content) */
@@ -267,11 +268,41 @@
 }
 
 /* -------------------------------------------------------------------------
-   Financial performance section
+   Financial performance section. Force dark text in cells (Oman/Tunisia use --textColor:#fff).
+   Table divider color: #BFBFBF in all countries (override var(--borderColor)).
    ------------------------------------------------------------------------- */
 .markets-content .financial-table-title {
   color: #ED1C24 !important;
   font-size: 22px !important;
+}
+
+.markets-content .market-content-right-inner-bottom .divTable,
+.markets-content .market-content-right-inner-bottom .divTable .divTableRow,
+.markets-content .market-content-right-inner-bottom .divTable .divTableCell,
+.markets-content .market-content-right-inner-bottom .divTable .divTableHead,
+.markets-content .market-content-right-inner-bottom .divTableMbl,
+.markets-content .market-content-right-inner-bottom .divTableMbl .divTableRow,
+.markets-content .market-content-right-inner-bottom .divTableMbl .divTableCell,
+.markets-content .market-content-right-inner-bottom .divTableMbl .divTableHead {
+  border-color: #BFBFBF !important;
+}
+
+.markets-content .divTable .divTableCell {
+  color: #000000 !important;
+}
+
+/* Last column (current year): teal #68C0B5 for data cells only (override var(--bgColorOpacity)). */
+.markets-content .market-content-right-inner-bottom .divTableCell:last-child,
+.markets-content .market-content-right-inner-bottom .divTableHead:last-child {
+  background-color: #68C0B5 !important;
+  font-weight: 700 !important;
+}
+
+/* Last column header (year label): black background, white text. */
+.markets-content .market-content-right-inner-bottom .divTableCell.head-year.last,
+.markets-content .market-content-right-inner-bottom .divTableHead.head-year.last {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
 }
 
 .markets-content .divTableCell.head-year {
@@ -326,7 +357,7 @@
   width: 100% !important;
 }
 
-/* Year label – no background, no right padding so it sits against the line */
+/* Year label – no background, no right padding. Force dark text (Oman/Tunisia use --textColor:#fff). */
 .markets-content[data-astro-cid-yxp6mat3] .market-content-right-inner-top--left .result-years-item .progress-year[data-astro-cid-yxp6mat3],
 .markets-content[data-astro-cid-zgvjc3q7] .market-content-right-inner-top--left .result-years-item .progress-year[data-astro-cid-zgvjc3q7],
 .markets-content .market-content-right-inner-top--left .progress-year,
@@ -343,6 +374,7 @@
   padding-right: 0 !important;
   padding-left: 0 !important;
   text-align: left !important;
+  color: #000000 !important;
 }
 
 [dir="rtl"] .markets-content .progress-year {
@@ -403,10 +435,26 @@
   outline: none !important;
 }
 
-/* Most recent year (2025) – teal */
+/* Most recent year (2025) – teal bar, white counter text for contrast */
 .markets-content .result-years-item.last-year .progress-bar,
 .markets-content .result-years-item-mbl.last-year .progress-bar {
   background-color: #68C0B5 !important;
+}
+
+.markets-content .result-years-item.last-year .progress-bar .counter-finish,
+.markets-content .result-years-item-mbl.last-year .progress-bar .counter-finish {
+  color: #FFFFFF !important;
+}
+
+/* Progress bar counter: black in all countries (previous years and when inherited --textColor is white). */
+.markets-content .progress-bar .counter-finish,
+.markets-content .counter.counter-finish {
+  color: #000000 !important;
+}
+
+.markets-content .result-years-item.last-year .progress-bar .counter-finish,
+.markets-content .result-years-item-mbl.last-year .progress-bar .counter-finish {
+  color: #FFFFFF !important;
 }
 
 /* Other years – light teal */

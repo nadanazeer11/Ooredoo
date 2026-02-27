@@ -49,6 +49,12 @@ section::after,
   height: 0 !important;
 }
 
+@media only screen and (min-width: 1024px) {
+  .section-group-results[data-astro-cid-5yv2cfx7] .group-results-wrapper[data-astro-cid-5yv2cfx7] .group-results-inner[data-astro-cid-5yv2cfx7] .group-results-list[data-astro-cid-5yv2cfx7] .result-element[data-astro-cid-5yv2cfx7],
+  .section-group-results[data-astro-cid-325fmfsg] .group-results-wrapper[data-astro-cid-325fmfsg] .group-results-inner[data-astro-cid-325fmfsg] .group-results-list[data-astro-cid-325fmfsg] .result-element[data-astro-cid-325fmfsg] {
+    padding-inline-start: 5px !important;
+  }
+}
 /* Hide arc shape images */
 .arc-shape,
 img[class*="arc"],
@@ -361,6 +367,7 @@ section h2:first-child {
   z-index: 0 !important;
   display: flex !important;
   align-items: center !important;
+  margin-top: 10px !important;
 }
 
 /* Progress bar wrapper - rectangular left, rounded right */

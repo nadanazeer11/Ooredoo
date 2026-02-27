@@ -31,13 +31,11 @@
   color: #ED1C24 !important;
   font-size: 22px !important;
   font-weight: 600 !important;
-  padding-left: 49px !important; /* same as year column width – align with pills */
 }
 
 .markets-content .customers-subtitle {
   color: #ED1C24 !important;
   font-weight: 500 !important;
-  padding-left: 49px !important;
 }
 
 .markets-content .market-content-right-inner-top--left > .customers-subtitle::before {
@@ -47,7 +45,7 @@
 /* Large customers number (e.g. 2,988) */
 .markets-content .customers-counter {
   color: #68C0B5 !important;
-  padding-left: 49px !important;
+  /* padding-left: 49px !important; */
 }
 
 /* RTL: align with pill start (pill is on the right in RTL) */
@@ -63,7 +61,7 @@
    ------------------------------------------------------------------------- */
 .markets-content .operator-importance,
 .markets-content .operator-importance-mbl {
-  padding-left: 49px !important;
+  /* padding-left: 49px !important; */
 }
 
 [dir="rtl"] .markets-content .operator-importance,
@@ -109,6 +107,7 @@
 
 .markets-content .importance-list {
    margin-top:5rem !important;
+   gap:18px !important;
    /* TODO: Nada if i want to make space smaller add padding-inline:21px !important; */
  
 }

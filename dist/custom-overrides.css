@@ -4,6 +4,18 @@
    Add your custom styles here to avoid losing them on rebuild
    ============================================ */
 
+/* ============================================
+   Countries section (#country-performance)
+   - Tab swiper: .markets-tabs (and .market-nav buttons) — KEEP AS-IS.
+   - Content panel: .markets-content and its children — style changes go here.
+     Structure: .markets-content > .market-content (per country)
+       > .market-content-left (flag, title, intro, CEO name/position, CEO image)
+       > .market-content-right > .inner
+         > .market-content-right-inner-top (customers, operator importance)
+         > .market-content-right-inner-bottom (financial table)
+   New styles for the content panel only: use countries-section-content.css
+   ============================================ */
+
 /* Remove semicircle shapes from sections */
 section,
 section > *,

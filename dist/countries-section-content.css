@@ -1,0 +1,182 @@
+/* ============================================
+   Countries section – content panel styles only
+   Applies to the div that displays country details and numbers.
+   The tab swiper (.markets-tabs) is unchanged.
+   ============================================ */
+
+/* -------------------------------------------------------------------------
+   1. Container background – whole market-content panel (left + right) to white
+   ------------------------------------------------------------------------- */
+.markets-content .market-content,
+.markets-content .market-content-left,
+.markets-content .market-content-right,
+.markets-content .market-content-right .inner,
+.markets-content .market-content-right-inner-top,
+.markets-content .market-content-right-inner-bottom {
+  background-color: #FFFFFF !important;
+}
+
+/* -------------------------------------------------------------------------
+   2. Customers block – text and counter
+   ------------------------------------------------------------------------- */
+/* "Customers in thousands" – red, no brackets (brackets removed in HTML) */
+.markets-content .customers-title{
+   color: #ED1C24 !important;
+   font-weight: 600 !important;
+ }
+
+.markets-content .customers-subtitle {
+  color: #ED1C24 !important;
+  font-weight: 500 !important;
+}
+
+.markets-content .market-content-right-inner-top--left > .customers-subtitle::before {
+  content: " ";
+}
+
+/* Large customers number (e.g. 2,988) */
+.markets-content .customers-counter {
+  color: #68C0B5 !important;
+}
+
+/* -------------------------------------------------------------------------
+   Operator importance to Group
+   ------------------------------------------------------------------------- */
+/* Section title only: "Operator importance to Group" – red, 16px */
+.markets-content .operator-importance > .importance-title,
+.markets-content .operator-importance-mbl > .importance-title {
+  color: #ED1C24 !important;
+  font-size: 16px !important;
+}
+
+/* Row labels: "Customers", "EBITDA", "Revenue", "CAPEX" – black */
+.markets-content .importance-element .importance-title {
+  color: #000000 !important;
+  font-size:15px !important;
+  font-weight: 500 !important;
+}
+
+.markets-content .importance-counter {
+  color: #000000 !important;
+}
+.markets-content .importance-list {
+   gap:16px !important;
+}
+
+
+
+/* -------------------------------------------------------------------------
+   3 & 4. Result year progress bars – Highlights tube style
+   (Reuse same rounded tube + vertical divider as #group-results)
+   ------------------------------------------------------------------------- */
+.markets-content .result-years-item,
+.markets-content .result-years-item-mbl {
+  position: relative !important;
+  z-index: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.markets-content .progress-year {
+  background-color: transparent !important;
+  z-index: 1 !important;
+  position: relative !important;
+  width: 49px !important;
+  min-width: 49px !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+}
+
+/* Tube wrapper – rectangular left, rounded right (same as Highlights) */
+.markets-content .progress-bar-wrapper {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-top-right-radius: 9999px !important;
+  border-bottom-right-radius: 9999px !important;
+  overflow: visible !important;
+  height: 30px !important;
+  position: relative !important;
+  z-index: 2 !important;
+  margin-left: 10px !important;
+  border: none !important;
+  outline: none !important;
+}
+
+/* Tube bar – same shape */
+.markets-content .progress-bar {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-top-right-radius: 9999px !important;
+  border-bottom-right-radius: 9999px !important;
+  height: 100% !important;
+  position: relative !important;
+  padding-left: 28px !important;
+  padding-right: 15px !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+  border: none !important;
+  outline: none !important;
+}
+
+/* Most recent year (2025) – teal */
+.markets-content .result-years-item.last-year .progress-bar,
+.markets-content .result-years-item-mbl.last-year .progress-bar {
+  background-color: #68C0B5 !important;
+}
+
+/* Other years – light teal */
+.markets-content .result-years-item.previous-years .progress-bar,
+.markets-content .result-years-item .progress-bar.previous-years,
+.markets-content .result-years-item-mbl.previous-years .progress-bar,
+.markets-content .result-years-item-mbl .progress-bar.previous-years {
+  background-color: #CCE5E0 !important;
+}
+
+/* Vertical divider at the start of the tube (same as Highlights) */
+.markets-content .progress-bar-wrapper::before {
+  content: "" !important;
+  position: absolute !important;
+  left: -20px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  height: 36px !important;
+  width: 3px !important;
+  background-color: #68C0B5 !important;
+  z-index: 2 !important;
+}
+
+.markets-content .result-years-item.previous-years .progress-bar-wrapper::before,
+.markets-content .result-years-item-mbl.previous-years .progress-bar-wrapper::before,
+.markets-content .progress-bar-wrapper:has(.progress-bar.previous-years)::before {
+  background-color: #CCE5E0 !important;
+}
+
+/* RTL – marker on right, rounded on left */
+[dir="rtl"] .markets-content .progress-bar {
+  padding-right: 28px !important;
+  padding-left: 15px !important;
+}
+
+[dir="rtl"] .markets-content .progress-bar-wrapper {
+  border-top-left-radius: 9999px !important;
+  border-bottom-left-radius: 9999px !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 10px !important;
+}
+
+[dir="rtl"] .markets-content .progress-bar {
+  border-top-left-radius: 9999px !important;
+  border-bottom-left-radius: 9999px !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+[dir="rtl"] .markets-content .progress-bar-wrapper::before {
+  left: auto !important;
+  right: -20px !important;
+}

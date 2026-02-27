@@ -352,7 +352,7 @@
   display: flex !important;
   align-items: center !important;
   width: 100% !important;
-  margin-bottom: 8px !important;
+  margin-bottom: 12px !important;
   justify-content: flex-start !important;
   transition: none !important;
 }
@@ -381,6 +381,9 @@
   color: #000000 !important;
 }
 
+/* Arabic: year numbers aligned right */
+[dir="rtl"] .markets-content[data-astro-cid-zgvjc3q7] .market-content-right-inner-top--left .result-years-item .progress-year[data-astro-cid-zgvjc3q7],
+[dir="rtl"] .markets-content .market-content-right-inner-top--left .progress-year,
 [dir="rtl"] .markets-content .progress-year {
   text-align: right !important;
 }
@@ -420,6 +423,12 @@
   background-color: #CCE5E0 !important;
 }
 
+/* Last year vertical line – teal (after previous-years so it wins when bar has .previous-years in AR) */
+.markets-content .result-years-item.last-year .progress-bar-wrapper::before,
+.markets-content .result-years-item-mbl.last-year .progress-bar-wrapper::before {
+  background-color: #68C0B5 !important;
+}
+
 /* Tube bar – text aligned to end (right in LTR) */
 .markets-content .progress-bar {
   display: flex !important;
@@ -439,12 +448,7 @@
   outline: none !important;
 }
 
-/* Most recent year (2025) – teal bar, white counter text for contrast */
-.markets-content .result-years-item.last-year .progress-bar,
-.markets-content .result-years-item-mbl.last-year .progress-bar {
-  background-color: #68C0B5 !important;
-}
-
+/* Most recent year (2025) – white counter text for contrast (bar color set after previous-years rule) */
 .markets-content .result-years-item.last-year .progress-bar .counter-finish,
 .markets-content .result-years-item-mbl.last-year .progress-bar .counter-finish {
   color: #FFFFFF !important;
@@ -467,6 +471,12 @@
 .markets-content .result-years-item-mbl.previous-years .progress-bar,
 .markets-content .result-years-item-mbl .progress-bar.previous-years {
   background-color: #CCE5E0 !important;
+}
+
+/* Last year bar always #68C0B5 (after previous-years so it wins when bar has .previous-years in AR) */
+.markets-content .result-years-item.last-year .progress-bar,
+.markets-content .result-years-item-mbl.last-year .progress-bar {
+  background-color: #68C0B5 !important;
 }
 
 /* RTL – marker on right, rounded on left; text at end (left in RTL) */

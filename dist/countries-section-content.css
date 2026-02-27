@@ -16,19 +16,28 @@
   background-color: #FFFFFF !important;
 }
 
+/* Left block (customers + progress bars) – wider */
+.markets-content[data-astro-cid-yxp6mat3] .market-content[data-astro-cid-yxp6mat3] .market-content-right[data-astro-cid-yxp6mat3] .market-content-right-inner-top[data-astro-cid-yxp6mat3] .market-content-right-inner-top--left[data-astro-cid-yxp6mat3],
+.markets-content[data-astro-cid-zgvjc3q7] .market-content[data-astro-cid-zgvjc3q7] .market-content-right[data-astro-cid-zgvjc3q7] .market-content-right-inner-top[data-astro-cid-zgvjc3q7] .market-content-right-inner-top--left[data-astro-cid-zgvjc3q7],
+.markets-content .market-content-right-inner-top--left {
+  max-width: 330px !important;
+}
+
 /* -------------------------------------------------------------------------
-   2. Customers block – text and counter
+   2. Customers block – text and counter (align with pill start, not year column)
    ------------------------------------------------------------------------- */
 /* "Customers in thousands" – section title: red, 22px */
 .markets-content .customers-title {
   color: #ED1C24 !important;
   font-size: 22px !important;
   font-weight: 600 !important;
+  padding-left: 49px !important; /* same as year column width – align with pills */
 }
 
 .markets-content .customers-subtitle {
   color: #ED1C24 !important;
   font-weight: 500 !important;
+  padding-left: 49px !important;
 }
 
 .markets-content .market-content-right-inner-top--left > .customers-subtitle::before {
@@ -38,11 +47,31 @@
 /* Large customers number (e.g. 2,988) */
 .markets-content .customers-counter {
   color: #68C0B5 !important;
+  padding-left: 49px !important;
+}
+
+/* RTL: align with pill start (pill is on the right in RTL) */
+[dir="rtl"] .markets-content .customers-title,
+[dir="rtl"] .markets-content .customers-subtitle,
+[dir="rtl"] .markets-content .customers-counter {
+  padding-left: 0 !important;
+  padding-right: 49px !important;
 }
 
 /* -------------------------------------------------------------------------
-   Operator importance to Group
+   Operator importance to Group (align with pills – same 49px line)
    ------------------------------------------------------------------------- */
+.markets-content .operator-importance,
+.markets-content .operator-importance-mbl {
+  padding-left: 49px !important;
+}
+
+[dir="rtl"] .markets-content .operator-importance,
+[dir="rtl"] .markets-content .operator-importance-mbl {
+  padding-left: 0 !important;
+  padding-right: 49px !important;
+}
+
 /* Section title only: "Operator importance to Group" – red, 22px */
 .markets-content .operator-importance > .importance-title,
 .markets-content .operator-importance-mbl > .importance-title {
@@ -59,6 +88,7 @@
 
 .markets-content .importance-counter {
   color: #000000 !important;
+  text-align: flex-end !important;
 }
 
 /* -------------------------------------------------------------------------
@@ -78,7 +108,7 @@
 }
 
 .markets-content .importance-list {
-   margin-top:6rem !important;
+   margin-top:5rem !important;
    /* TODO: Nada if i want to make space smaller add padding-inline:21px !important; */
  
 }
@@ -88,29 +118,64 @@
 
 
 /* -------------------------------------------------------------------------
-   3 & 4. Result year progress bars – Highlights tube style
-   (Reuse same rounded tube + vertical divider as #group-results)
+   3 & 4. Result year progress bars – same structure as #group-results
+   Override build/animation styles that set bg, max-width, padding on the row.
    ------------------------------------------------------------------------- */
+/* Override Astro/build CSS: no background on row, full width, no pill shape on row.
+   Match build selector specificity (data-astro-cid-* on each node) so we win. */
+.markets-content[data-astro-cid-yxp6mat3] .market-content[data-astro-cid-yxp6mat3] .market-content-right[data-astro-cid-yxp6mat3] .market-content-right-inner-top[data-astro-cid-yxp6mat3] .market-content-right-inner-top--left[data-astro-cid-yxp6mat3] .result-years[data-astro-cid-yxp6mat3] .result-years-item[data-astro-cid-yxp6mat3],
+.markets-content[data-astro-cid-zgvjc3q7] .market-content[data-astro-cid-zgvjc3q7] .market-content-right[data-astro-cid-zgvjc3q7] .market-content-right-inner-top[data-astro-cid-zgvjc3q7] .market-content-right-inner-top--left[data-astro-cid-zgvjc3q7] .result-years[data-astro-cid-zgvjc3q7] .result-years-item[data-astro-cid-zgvjc3q7],
+.markets-content .market-content .market-content-right .market-content-right-inner-top .market-content-right-inner-top--left .result-years .result-years-item,
+.markets-content .market-content-right-inner-top--left .result-years .result-years-item,
 .markets-content .result-years-item,
 .markets-content .result-years-item-mbl {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  max-width: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  border: none !important;
   position: relative !important;
   z-index: 0 !important;
   display: flex !important;
   align-items: center !important;
+  width: 100% !important;
+  margin-bottom: 8px !important;
+  justify-content: flex-start !important;
+  transition: none !important;
 }
 
+.markets-content .result-years {
+  width: 100% !important;
+}
+
+/* Year label – no background, no right padding so it sits against the line */
+.markets-content[data-astro-cid-yxp6mat3] .market-content-right-inner-top--left .result-years-item .progress-year[data-astro-cid-yxp6mat3],
+.markets-content[data-astro-cid-zgvjc3q7] .market-content-right-inner-top--left .result-years-item .progress-year[data-astro-cid-zgvjc3q7],
+.markets-content .market-content-right-inner-top--left .progress-year,
 .markets-content .progress-year {
+  background: none !important;
   background-color: transparent !important;
+  background-image: none !important;
   z-index: 1 !important;
   position: relative !important;
   width: 49px !important;
   min-width: 49px !important;
   flex-shrink: 0 !important;
   display: inline-block !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  text-align: left !important;
 }
 
-/* Tube wrapper – rectangular left, rounded right (same as Highlights) */
+[dir="rtl"] .markets-content .progress-year {
+  text-align: right !important;
+}
+
+/* Tube wrapper – no left margin; slightly wider bar for section width */
 .markets-content .progress-bar-wrapper {
+  width: calc(var(--bar-width, 100%) - 40px) !important;
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
   border-top-right-radius: 9999px !important;
@@ -119,15 +184,34 @@
   height: 30px !important;
   position: relative !important;
   z-index: 2 !important;
-  margin-left: 10px !important;
+  margin-left: 0 !important;
   border: none !important;
   outline: none !important;
 }
 
-/* Tube bar – same shape */
+/* Vertical line at the left edge of the wrapper (touches year on left, pill on right) */
+.markets-content .progress-bar-wrapper::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  height: 36px !important;
+  width: 3px !important;
+  background-color: #68C0B5 !important;
+  z-index: 2 !important;
+}
+
+.markets-content .result-years-item.previous-years .progress-bar-wrapper::before,
+.markets-content .result-years-item-mbl.previous-years .progress-bar-wrapper::before,
+.markets-content .progress-bar-wrapper:has(.progress-bar.previous-years)::before {
+  background-color: #CCE5E0 !important;
+}
+
+/* Tube bar – text aligned to end (right in LTR) */
 .markets-content .progress-bar {
   display: flex !important;
-  justify-content: flex-start !important;
+  justify-content: flex-end !important;
   align-items: center !important;
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
@@ -135,7 +219,7 @@
   border-bottom-right-radius: 9999px !important;
   height: 100% !important;
   position: relative !important;
-  padding-left: 28px !important;
+  padding-left: 8px !important;
   padding-right: 15px !important;
   overflow: hidden !important;
   z-index: 1 !important;
@@ -157,28 +241,9 @@
   background-color: #CCE5E0 !important;
 }
 
-/* Vertical divider at the start of the tube (same as Highlights) */
-.markets-content .progress-bar-wrapper::before {
-  content: "" !important;
-  position: absolute !important;
-  left: -20px !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  height: 36px !important;
-  width: 3px !important;
-  background-color: #68C0B5 !important;
-  z-index: 2 !important;
-}
-
-.markets-content .result-years-item.previous-years .progress-bar-wrapper::before,
-.markets-content .result-years-item-mbl.previous-years .progress-bar-wrapper::before,
-.markets-content .progress-bar-wrapper:has(.progress-bar.previous-years)::before {
-  background-color: #CCE5E0 !important;
-}
-
-/* RTL – marker on right, rounded on left */
+/* RTL – marker on right, rounded on left; text at end (left in RTL) */
 [dir="rtl"] .markets-content .progress-bar {
-  padding-right: 28px !important;
+  padding-right: 8px !important;
   padding-left: 15px !important;
 }
 
@@ -188,7 +253,7 @@
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
   margin-left: 0 !important;
-  margin-right: 10px !important;
+  margin-right: 0 !important;
 }
 
 [dir="rtl"] .markets-content .progress-bar {
@@ -196,9 +261,11 @@
   border-bottom-left-radius: 9999px !important;
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
+  padding-right: 8px !important;
+  padding-left: 15px !important;
 }
 
 [dir="rtl"] .markets-content .progress-bar-wrapper::before {
   left: auto !important;
-  right: -20px !important;
+  right: 0 !important;
 }

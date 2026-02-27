@@ -390,7 +390,7 @@
 
 /* Tube wrapper – no left margin; slightly wider bar for section width */
 .markets-content .progress-bar-wrapper {
-  width: calc(var(--bar-width, 100%) - 40px) !important;
+  width: calc(100% - 40px) !important;
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
   border-top-right-radius: 9999px !important;
@@ -506,6 +506,187 @@
 [dir="rtl"] .markets-content .progress-bar-wrapper::before {
   left: auto !important;
   right: 0 !important;
+}
+
+/* -------------------------------------------------------------------------
+   Countries section – MOBILE (accordion) – match desktop styling
+   Mobile uses #country-performance .container.mobile with accordions, not .markets-content.
+   Override build styles that use var(--textColor) / var(--bgColor) per country.
+   ------------------------------------------------------------------------- */
+/* Accordion content panel – white background like desktop */
+#country-performance .accordion-content {
+  background-color: #FFFFFF !important;
+}
+
+/* Accordion header when opened – white background, dark text (override var(--bgColor) / var(--textBasic)) */
+#country-performance .accordion-header.opened {
+  background-color: #FFFFFF !important;
+  color: #000000 !important;
+}
+
+/* Chevron visible on white when opened – black fill */
+#country-performance .accordion-header.opened .chevron,
+#country-performance .accordion-header.opened .chevron path {
+  color: #000000 !important;
+  fill: #000000 !important;
+}
+
+/* Intro paragraph and year labels – black (Oman/Tunisia use --textColor white, else invisible) */
+#country-performance .accordion-content > p {
+  color: #000000 !important;
+}
+#country-performance .accordion-content .progress-year {
+  color: #000000 !important;
+}
+
+/* Big number (customers) – teal like desktop, not var(--textColor) */
+#country-performance .accordion-content .customers-counter {
+  color: #68C0B5 !important;
+}
+
+/* Importance counter – black like desktop, not country color (e.g. yellow in Qatar) */
+#country-performance .accordion-content .importance-counter,
+#country-performance .accordion-content .importance-counter .counter {
+  color: #000000 !important;
+}
+
+/* Importance section title and row labels – black (Oman/Tunisia use white --textColor) */
+#country-performance .accordion-content .importance-title {
+  color: #000000 !important;
+}
+
+/* Table cells – all values black; year headers black, last column header white (rule below) */
+#country-performance .divTableMbl .divTableCell,
+#country-performance .divTableMbl .divTableHead {
+  color: #000000 !important;
+}
+
+/* Table cell headers (year labels) – black, not var(--textColor) */
+#country-performance .divTableMbl .divTableCell.head-year,
+#country-performance .divTableMbl .divTableHead.head-year {
+  color: #000000 !important;
+}
+
+/* Last column (current year): teal #68C0B5 for data cells (override country color) */
+#country-performance .divTableMbl .divTableCell:last-child,
+#country-performance .divTableMbl .divTableHead:last-child {
+  background-color: #68C0B5 !important;
+  font-weight: 700 !important;
+}
+
+/* Last year column header – black bg, white text */
+#country-performance .divTableMbl .divTableCell.head-year.last,
+#country-performance .divTableMbl .divTableHead.head-year.last {
+  background-color: #000000 !important;
+  color: #FFFFFF !important;
+}
+
+/* Last year row – no extra bg/color from build (override var(--textColor) / var(--colorTextFirstResult)); bar is #68C0B5 only */
+#country-performance .accordion-content .last-year,
+#country-performance .accordion-content .result-years-item-mbl.last-year {
+  background-color: transparent !important;
+  background: none !important;
+  color: inherit !important;
+}
+
+/* Progress bars in accordion – same design as desktop: pill + vertical line */
+#country-performance .accordion-content .progress-bar-wrapper {
+  width: calc(100% - 40px) !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-top-right-radius: 9999px !important;
+  border-bottom-right-radius: 9999px !important;
+  overflow: visible !important;
+  height: 30px !important;
+  position: relative !important;
+  z-index: 2 !important;
+  margin-left: 0 !important;
+  border: none !important;
+  outline: none !important;
+}
+
+#country-performance .accordion-content .progress-bar-wrapper::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  height: 36px !important;
+  width: 3px !important;
+  background-color: #68C0B5 !important;
+  z-index: 2 !important;
+}
+
+#country-performance .accordion-content .result-years-item-mbl.previous-years .progress-bar-wrapper::before,
+#country-performance .accordion-content .progress-bar-wrapper:has(.progress-bar.previous-years)::before {
+  background-color: #CCE5E0 !important;
+}
+
+#country-performance .accordion-content .result-years-item-mbl.last-year .progress-bar-wrapper::before {
+  background-color: #68C0B5 !important;
+}
+
+#country-performance .accordion-content .progress-bar {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-top-right-radius: 9999px !important;
+  border-bottom-right-radius: 9999px !important;
+  height: 100% !important;
+  position: relative !important;
+  padding-left: 8px !important;
+  padding-right: 15px !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+  border: none !important;
+  outline: none !important;
+}
+
+#country-performance .accordion-content .result-years-item-mbl.previous-years .progress-bar,
+#country-performance .accordion-content .progress-bar.previous-years {
+  background-color: #CCE5E0 !important;
+}
+
+#country-performance .accordion-content .result-years-item-mbl.last-year .progress-bar {
+  background-color: #68C0B5 !important;
+}
+
+#country-performance .accordion-content .result-years-item-mbl.last-year .progress-bar .counter,
+#country-performance .accordion-content .result-years-item-mbl.last-year .progress-bar .counter-finish {
+  color: #FFFFFF !important;
+}
+
+#country-performance .accordion-content .progress-bar .counter,
+#country-performance .accordion-content .progress-bar .counter-finish {
+  color: #000000 !important;
+}
+
+#country-performance .accordion-content .result-years-item-mbl.last-year .progress-bar .counter,
+#country-performance .accordion-content .result-years-item-mbl.last-year .progress-bar .counter-finish {
+  color: #FFFFFF !important;
+}
+
+[dir="rtl"] #country-performance .accordion-content .progress-bar-wrapper::before {
+  left: auto !important;
+  right: 0 !important;
+}
+
+[dir="rtl"] #country-performance .accordion-content .progress-bar {
+  padding-right: 8px !important;
+  padding-left: 15px !important;
+  border-top-left-radius: 9999px !important;
+  border-bottom-left-radius: 9999px !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+[dir="rtl"] #country-performance .accordion-content .progress-bar-wrapper {
+  border-top-left-radius: 9999px !important;
+  border-bottom-left-radius: 9999px !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
 
 /* -------------------------------------------------------------------------

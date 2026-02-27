@@ -24,6 +24,137 @@
 }
 
 /* -------------------------------------------------------------------------
+   Market content LEFT – centered hero layout (red shape, country pill, CEO)
+   ------------------------------------------------------------------------- */
+.markets-content .market-content-left {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  /* padding-block: 0 32px !important; */
+  padding-inline-start: 22px !important;
+  /* padding-inline-end: 48px !important; */
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Hero block: red shape + country pill + CEO image */
+.markets-content .market-content-left-hero {
+  position: relative !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  margin-bottom: 0 !important;
+}
+
+/* Large red curved background at top */
+.markets-content .market-content-left-red {
+  position: absolute !important;
+  top: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 80% !important;
+  max-width: 100% !important;
+  height: 200px !important;
+  background-color: #ED1C24 !important;
+  border-radius: 0 0 50% 50% !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Country pill: white rounded, flag + title, centered */
+.markets-content .country-pill {
+  position: relative !important;
+  z-index: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  background-color: #FFFFFF !important;
+  /* padding: 0px 20px !important; */
+  border-radius: 9999px !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+  margin-top: 24px !important;
+  margin-bottom: 16px !important;
+  width: 80% !important;
+  text-align: center !important;
+  /* padding-left: auto !important; */
+}
+
+.markets-content .country-pill .flag-country {
+  width: 32px !important;
+  height: 32px !important;
+  object-fit: contain !important;
+  flex-shrink: 0 !important;
+  align-self: center !important;
+}
+
+.markets-content .country-pill .content-title {
+  margin: 0 !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: #000000 !important;
+  text-align: center !important;
+}
+
+/* CEO image – centered, larger, overlaps red shape */
+.markets-content .market-content-left-hero .ceo-image,
+.markets-content .market-content-left-hero > img[src*="CEO"],
+.markets-content .market-content-left-hero > img {
+  position: relative !important;
+  z-index: 1 !important;
+  width: 290px !important;
+  max-width: 95% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  margin-top: -40px !important;
+  margin-bottom: 16px !important;
+}
+
+/* CEO name – red rounded pill (button style) */
+.markets-content .market-content-left .content-name {
+  position: relative !important;
+  z-index: 1 !important;
+  display: inline-block !important;
+  background-color: #ED1C24 !important;
+  color: #FFFFFF !important;
+  padding: 10px 24px !important;
+  border-radius: 9999px !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  margin: 0 0 8px !important;
+  max-width: 90% !important;
+}
+
+/* CEO position – smaller red text */
+.markets-content .market-content-left .content-position {
+  position: relative !important;
+  z-index: 1 !important;
+  color: #ED1C24 !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+  margin: 0 0 16px !important;
+}
+
+/* Paragraph – centered, limited width */
+.markets-content .market-content-left .market-content-left-paragraph,
+.markets-content .market-content-left p.mt-3 {
+  position: relative !important;
+  z-index: 1 !important;
+  max-width: 320px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  line-height: 1.5 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Hide old content-info when hero structure exists (no duplicate content) */
+.markets-content .market-content-left:has(.market-content-left-hero) .content-info {
+  display: none !important;
+}
+
+/* -------------------------------------------------------------------------
    2. Customers block – text and counter (align with pill start, not year column)
    ------------------------------------------------------------------------- */
 /* "Customers in thousands" – section title: red, 22px */
@@ -45,7 +176,6 @@
 /* Large customers number (e.g. 2,988) */
 .markets-content .customers-counter {
   color: #68C0B5 !important;
-  /* padding-left: 49px !important; */
 }
 
 /* RTL: align with pill start (pill is on the right in RTL) */
@@ -61,7 +191,6 @@
    ------------------------------------------------------------------------- */
 .markets-content .operator-importance,
 .markets-content .operator-importance-mbl {
-  /* padding-left: 49px !important; */
 }
 
 [dir="rtl"] .markets-content .operator-importance,
@@ -107,7 +236,7 @@
 
 .markets-content .importance-list {
    margin-top:5rem !important;
-   gap:18px !important;
+   gap:16px !important;
    /* TODO: Nada if i want to make space smaller add padding-inline:21px !important; */
  
 }

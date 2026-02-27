@@ -19,11 +19,12 @@
 /* -------------------------------------------------------------------------
    2. Customers block – text and counter
    ------------------------------------------------------------------------- */
-/* "Customers in thousands" – red, no brackets (brackets removed in HTML) */
-.markets-content .customers-title{
-   color: #ED1C24 !important;
-   font-weight: 600 !important;
- }
+/* "Customers in thousands" – section title: red, 22px */
+.markets-content .customers-title {
+  color: #ED1C24 !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+}
 
 .markets-content .customers-subtitle {
   color: #ED1C24 !important;
@@ -42,11 +43,11 @@
 /* -------------------------------------------------------------------------
    Operator importance to Group
    ------------------------------------------------------------------------- */
-/* Section title only: "Operator importance to Group" – red, 16px */
+/* Section title only: "Operator importance to Group" – red, 22px */
 .markets-content .operator-importance > .importance-title,
 .markets-content .operator-importance-mbl > .importance-title {
   color: #ED1C24 !important;
-  font-size: 16px !important;
+  font-size: 22px !important;
 }
 
 /* Row labels: "Customers", "EBITDA", "Revenue", "CAPEX" – black */
@@ -59,8 +60,26 @@
 .markets-content .importance-counter {
   color: #000000 !important;
 }
+
+/* -------------------------------------------------------------------------
+   Financial performance section
+   ------------------------------------------------------------------------- */
+.markets-content .financial-table-title {
+  color: #ED1C24 !important;
+  font-size: 22px !important;
+}
+
+.markets-content .divTableCell.head-year {
+  font-weight: normal !important;
+}
+
+.markets-content .divTableCell.head-year.last {
+  font-weight: bold !important;
+}
+
 .markets-content .importance-list {
    margin-top:6rem !important;
+   /* TODO: Nada if i want to make space smaller add padding-inline:21px !important; */
  
 }
 

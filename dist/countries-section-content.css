@@ -20,7 +20,7 @@
 .markets-content[data-astro-cid-yxp6mat3] .market-content[data-astro-cid-yxp6mat3] .market-content-right[data-astro-cid-yxp6mat3] .market-content-right-inner-top[data-astro-cid-yxp6mat3] .market-content-right-inner-top--left[data-astro-cid-yxp6mat3],
 .markets-content[data-astro-cid-zgvjc3q7] .market-content[data-astro-cid-zgvjc3q7] .market-content-right[data-astro-cid-zgvjc3q7] .market-content-right-inner-top[data-astro-cid-zgvjc3q7] .market-content-right-inner-top--left[data-astro-cid-zgvjc3q7],
 .markets-content .market-content-right-inner-top--left {
-  max-width: 330px !important;
+  max-width: 300px !important;
 }
 
 @media (min-width: 1280px) {

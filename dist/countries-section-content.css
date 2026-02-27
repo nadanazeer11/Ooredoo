@@ -232,7 +232,7 @@
 [dir="rtl"] .markets-content .customers-subtitle,
 [dir="rtl"] .markets-content .customers-counter {
   padding-left: 0 !important;
-  padding-right: 49px !important;
+  /* padding-right: 49px !important; */
 }
 
 /* -------------------------------------------------------------------------
@@ -245,7 +245,7 @@
 [dir="rtl"] .markets-content .operator-importance,
 [dir="rtl"] .markets-content .operator-importance-mbl {
   padding-left: 0 !important;
-  padding-right: 49px !important;
+  /* padding-right: 49px !important; */
 }
 
 /* Section title only: "Operator importance to Group" – red, 22px */
@@ -260,6 +260,10 @@
   color: #000000 !important;
   font-size:15px !important;
   font-weight: 500 !important;
+}
+
+[dir="rtl"] .markets-content .importance-element .importance-title {
+  font-size: 13px !important;
 }
 
 .markets-content .importance-counter {
@@ -492,4 +496,28 @@
 [dir="rtl"] .markets-content .progress-bar-wrapper::before {
   left: auto !important;
   right: 0 !important;
+}
+
+/* -------------------------------------------------------------------------
+   Countries section: mobile vs desktop visibility (same as English / strategic-pillars).
+   Mobile-first: show mobile by default, desktop on larger screens.
+   Ensures Arabic and any build show only one layout per viewport.
+   ------------------------------------------------------------------------- */
+#country-performance.section-markets .container.mobile,
+.section-markets#country-performance .container.mobile {
+  display: block !important;
+}
+#country-performance.section-markets .container-big.desktop,
+.section-markets#country-performance .container-big.desktop {
+  display: none !important;
+}
+@media (min-width: 769px) {
+  #country-performance.section-markets .container.mobile,
+  .section-markets#country-performance .container.mobile {
+    display: none !important;
+  }
+  #country-performance.section-markets .container-big.desktop,
+  .section-markets#country-performance .container-big.desktop {
+    display: block !important;
+  }
 }

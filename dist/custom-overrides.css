@@ -49,10 +49,19 @@ section::after,
   height: 0 !important;
 }
 
+/* Group results list – more space between items from 629px up */
+@media only screen and (min-width: 629px) {
+  .section-group-results[data-astro-cid-5yv2cfx7] .group-results-wrapper[data-astro-cid-5yv2cfx7] .group-results-inner[data-astro-cid-5yv2cfx7] .group-results-list[data-astro-cid-5yv2cfx7],
+  .section-group-results[data-astro-cid-325fmfsg] .group-results-wrapper[data-astro-cid-325fmfsg] .group-results-inner[data-astro-cid-325fmfsg] .group-results-list[data-astro-cid-325fmfsg] {
+    gap: 44px !important;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
   .section-group-results[data-astro-cid-5yv2cfx7] .group-results-wrapper[data-astro-cid-5yv2cfx7] .group-results-inner[data-astro-cid-5yv2cfx7] .group-results-list[data-astro-cid-5yv2cfx7] .result-element[data-astro-cid-5yv2cfx7],
   .section-group-results[data-astro-cid-325fmfsg] .group-results-wrapper[data-astro-cid-325fmfsg] .group-results-inner[data-astro-cid-325fmfsg] .group-results-list[data-astro-cid-325fmfsg] .result-element[data-astro-cid-325fmfsg] {
-    padding-inline-start: 5px !important;
+    padding-inline: 0 !important;
+    max-width: calc(33.33% - 54px) !important;
   }
 }
 /* Hide arc shape images */

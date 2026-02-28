@@ -90,7 +90,17 @@ section {
 /* Push hero content down so nav doesn’t hide the heading */
 .hero-content[data-astro-cid-nlow4r3u],
 .hero-content[data-astro-cid-5luozhpp] {
-  padding-top: 220px !important;
+  padding-top: 200px !important;
+}
+
+/* Hero bg-video height – ~567px, cap at 570px (override 75vh / min-height 650px) */
+@media (min-width: 1025px) {
+  .section-hero[data-astro-cid-nlow4r3u] .bg-video[data-astro-cid-nlow4r3u],
+  .section-hero[data-astro-cid-5luozhpp] .bg-video[data-astro-cid-5luozhpp] {
+    height: 567px !important;
+    min-height: 567px !important;
+    max-height: 570px !important;
+  }
 }
 
 /* Add padding to section titles */

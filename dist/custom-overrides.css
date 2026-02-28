@@ -193,12 +193,18 @@ section h2:first-child {
 /* English blob titles */
 .introduction-image .img-content-1::before {
   content: "Chairman's\AMessage" !important;
-  padding-top: 70px !important;
+  padding-top: 72px !important;
+  font: normal normal bold 35px Outfit !important;
+  padding-left: 44px !important;
+
 }
 
 .introduction-image .img-content-2::before {
   content: "CEO's\AMessage" !important;
-  padding-top: 70px !important;
+  padding-top: 72px !important;
+  font: normal normal bold 35px Outfit !important;
+  padding-left: 44px !important;
+
 
 }
 

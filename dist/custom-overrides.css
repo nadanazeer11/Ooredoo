@@ -80,6 +80,19 @@ section {
   background-color: #FFFFFF !important;
 }
 
+/* Hero nav: default (before sticky) – use top instead of bottom; .hero-nav-sticked still handles fixed state */
+.hero-navigation[data-astro-cid-nlow4r3u],
+.hero-navigation[data-astro-cid-5luozhpp] {
+  top: 120px !important;
+  bottom: auto !important;
+}
+
+/* Push hero content down so nav doesn’t hide the heading */
+.hero-content[data-astro-cid-nlow4r3u],
+.hero-content[data-astro-cid-5luozhpp] {
+  padding-top: 220px !important;
+}
+
 /* Add padding to section titles */
 .group-results-title,
 .strategy__title,

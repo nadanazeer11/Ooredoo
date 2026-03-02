@@ -136,6 +136,15 @@
   display: block !important;
 }
 
+/* Asiacell Iraq – smaller pill text and flag so it matches other country names */
+.markets-content .market-content-4 .country-pill .content-title {
+  font-size: 22px !important;
+}
+.markets-content .market-content-4 .country-pill .flag-country {
+  width: 26px !important;
+  height: 26px !important;
+}
+
 /* CEO image – centered, larger, overlaps red shape */
 .markets-content .market-content-left-hero .ceo-image,
 .markets-content .market-content-left-hero > img[src*="CEO"],
@@ -529,6 +538,17 @@
 #country-performance .accordion-header.opened .chevron path {
   color: #000000 !important;
   fill: #000000 !important;
+}
+
+/* Mobile: Asiacell Iraq accordion header – smaller title and flag to match other countries */
+#country-performance .accordion-header:has(img[alt="Iraq flag"]) h3,
+#country-performance .accordion-header:has(img[alt*="العراق"]) h3 {
+  font-size: 0.9rem !important;
+}
+#country-performance .accordion-header:has(img[alt="Iraq flag"]) .flag-country,
+#country-performance .accordion-header:has(img[alt*="العراق"]) .flag-country {
+  width: 32px !important;
+  height: 32px !important;
 }
 
 /* Intro paragraph and year labels – black (Oman/Tunisia use --textColor white, else invisible) */

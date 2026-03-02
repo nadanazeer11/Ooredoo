@@ -452,7 +452,7 @@ section h2:first-child {
 
 /* Single big divider above definitions/footnotes section */
 #group-results .group-results-divider {
-  width: 100% !important;
+  width: 98% !important;
   height: 1px !important;
   background-color: #383838 !important;
   margin: 0px 10px 20px 10px !important;

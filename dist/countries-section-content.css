@@ -24,9 +24,23 @@
   border-color: #BFBFBF !important;
 }
 
-/* Inner top (customers + progress block) – border bottom gray in all countries, not var(--borderColor) */
+/* Inner top (customers + progress block) – gray line below; control how wide the line is (horizontal extent) */
 .markets-content .market-content-right .market-content-right-inner-top {
-  border-bottom-color: #BFBFBF !important;
+  position: relative !important;
+  border-bottom: none !important;
+}
+.markets-content .market-content-right .market-content-right-inner-top::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 32px !important;
+  right: 24px !important;
+  bottom: 0 !important;
+  height: 1px !important;
+  background-color: #BFBFBF !important;
+}
+[dir="rtl"] .markets-content .market-content-right .market-content-right-inner-top::after {
+  left: 24px !important;
+  right: 32px !important;
 }
 
 @media (min-width: 1280px) {

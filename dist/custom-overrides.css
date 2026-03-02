@@ -170,7 +170,7 @@ section h2:first-child {
   left: 36% !important;
   transform: translateX(-50%) !important;
   width: 65% !important;
-  height: 35% !important;
+  height: 26% !important;
   background-color: #ED1C24 !important;
   border-radius: 0 !important; /* Flat rectangle */
   z-index: 2 !important;
@@ -189,11 +189,11 @@ section h2:first-child {
   content: '' !important;
   display: block !important;
   position: absolute !important;
-  top: calc(-183px + 35%) !important; /* Start where the rectangle ends */
+  top: calc(-183px + 26%) !important; /* Start where the rectangle ends */
   left: 36% !important;
   transform: translateX(-50%) !important;
   width: 65% !important; /* Same width as the rectangle */
-  height: 100px !important; /* Height of the semicircle */
+  height: 140px !important; /* Height of the semicircle */
   background-color: #ED1C24 !important;
   border-radius: 0 0 50% 50% / 0 0 100% 100% !important; /* Semicircle bottom */
   z-index: 1 !important;

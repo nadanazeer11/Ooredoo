@@ -88,7 +88,7 @@
   left: 50% !important;
   transform: translateX(-50%) !important;
   width: 100% !important;
-  height: 60px !important;
+  height: 40px !important;
   background-color: #ED1C24 !important;
   border-radius: 0 !important;
   z-index: 0 !important;
@@ -100,11 +100,11 @@
   content: '' !important;
   display: block !important;
   position: absolute !important;
-  top: 60px !important; /* where rectangle ends */
+  top: 40px !important; /* where rectangle ends */
   left: 50% !important;
   transform: translateX(-50%) !important;
   width: 100% !important;
-  height: 145px !important;
+  height: 165px !important;
   background-color: #ED1C24 !important;
   border-radius: 0 0 50% 50% / 0 0 100% 100% !important;
   z-index: 0 !important;

@@ -21,6 +21,12 @@
 .markets-content[data-astro-cid-zgvjc3q7] .market-content[data-astro-cid-zgvjc3q7] .market-content-right[data-astro-cid-zgvjc3q7] .market-content-right-inner-top[data-astro-cid-zgvjc3q7] .market-content-right-inner-top--left[data-astro-cid-zgvjc3q7],
 .markets-content .market-content-right-inner-top--left {
   max-width: 300px !important;
+  border-color: #BFBFBF !important;
+}
+
+/* Inner top (customers + progress block) – border bottom gray in all countries, not var(--borderColor) */
+.markets-content .market-content-right .market-content-right-inner-top {
+  border-bottom-color: #BFBFBF !important;
 }
 
 @media (min-width: 1280px) {
@@ -104,9 +110,9 @@
   flex-direction: row !important;
   align-items: center !important;
   justify-content: flex-start !important;
-  gap: 10px !important;
+  gap: 15px !important;
   background-color: #FFFFFF !important;
-  padding-inline-start: 5px !important;
+  padding-inline-start: 8px !important;
   padding-inline-end: 25px !important;
   padding-block: 8px !important;
   border-radius: 9999px !important;

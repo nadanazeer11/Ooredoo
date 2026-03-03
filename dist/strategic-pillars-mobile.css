@@ -169,6 +169,15 @@
     padding-inline-start: 8px;
   }
 
+  [dir="rtl"] .strategic-pillars-mobile .spm-content > ul {
+    line-height: 1.25;
+    padding-block: 0 12px;
+  }
+
+  [dir="rtl"] .strategic-pillars-mobile .spm-content li {
+    padding-block: 1px 1px;
+  }
+
   /* Download button */
   .strategic-pillars-mobile .spm-download {
     text-align: center;

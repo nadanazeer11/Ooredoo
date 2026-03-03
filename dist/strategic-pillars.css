@@ -144,7 +144,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 28px 24px;
+  padding: 10px 8px;
   box-sizing: border-box;
   opacity: 0;
   transform: translateY(8px);
@@ -246,8 +246,16 @@
   text-align: center;
 }
 
+[dir="rtl"] .section-strategic-pillars .sp-card-overlay .sp-overlay-title {
+  margin-bottom: 2px;
+}
+
+[dir="rtl"] .section-strategic-pillars .sp-card-overlay ul {
+}
+
 [dir="rtl"] .section-strategic-pillars .sp-card-overlay ul li {
   padding-inline-start: 8px;
+  padding-block: 1px 1px;
 }
 
 [dir="rtl"] .section-strategic-pillars .sp-card-overlay ul li::before {

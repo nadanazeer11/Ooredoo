@@ -160,9 +160,10 @@
 }
 
 .section-strategic-pillars .sp-card-overlay ul {
-  list-style: none;
+  list-style: disc;
   padding: 0;
   margin: 0;
+  padding-inline-start: 20px;
 }
 
 .section-strategic-pillars .sp-card-overlay ul li {
@@ -170,7 +171,8 @@
   color: #333;
   padding: 4px 0;
   position: relative;
-  /* padding-left: 14px; */
+  text-align: start !important;
+  /* padding-inline-start: 8px; */
 }
 
 .section-strategic-pillars .sp-card-overlay ul li::before {
@@ -245,8 +247,7 @@
 }
 
 [dir="rtl"] .section-strategic-pillars .sp-card-overlay ul li {
-  padding-left: 0;
-  padding-right: 0;
+  padding-inline-start: 8px;
 }
 
 [dir="rtl"] .section-strategic-pillars .sp-card-overlay ul li::before {

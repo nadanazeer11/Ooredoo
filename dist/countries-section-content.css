@@ -490,6 +490,7 @@
   z-index: 1 !important;
   border: none !important;
   outline: none !important;
+  margin-inline-start: 3px !important;
 }
 
 /* Most recent year (2025) – white counter text for contrast (bar color set after previous-years rule) */

@@ -458,8 +458,10 @@
   background-color: #68C0B5 !important;
 }
 
-/* Tube bar – text aligned to end (right in LTR) */
+/* Tube bar – dynamic width from --bar-width (inherited from .result-years-item); bar starts at same place, ends at different widths. Support desktop typo --bar---bar-width. */
 .markets-content .progress-bar {
+  width: var(--bar-width, var(--bar---bar-width, 100%)) !important;
+  max-width: 100% !important;
   display: flex !important;
   justify-content: flex-end !important;
   align-items: center !important;
@@ -524,6 +526,8 @@
 }
 
 [dir="rtl"] .markets-content .progress-bar {
+  margin-left: auto !important;
+  margin-right: 0 !important;
   border-top-left-radius: 9999px !important;
   border-bottom-left-radius: 9999px !important;
   border-top-right-radius: 0 !important;
@@ -667,6 +671,8 @@
 }
 
 #country-performance .accordion-content .progress-bar {
+  width: var(--bar-width, var(--bar---bar-width, 100%)) !important;
+  max-width: 100% !important;
   display: flex !important;
   justify-content: flex-end !important;
   align-items: center !important;
@@ -714,6 +720,8 @@
 }
 
 [dir="rtl"] #country-performance .accordion-content .progress-bar {
+  margin-left: auto !important;
+  margin-right: 0 !important;
   padding-right: 8px !important;
   padding-left: 15px !important;
   border-top-left-radius: 9999px !important;

@@ -100,6 +100,46 @@ section {
 .hero-content[data-astro-cid-nlow4r3u],
 .hero-content[data-astro-cid-5luozhpp] {
   padding-top: 200px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important; /* LTR: title starts left; circle uses align-self: flex-end to sit right */
+  width: 100% !important;
+}
+
+[dir="rtl"] .hero-content[data-astro-cid-5luozhpp] {
+  align-items: flex-start !important; /* RTL: title stays right; circle uses margin-inline-start: auto to sit left */
+}
+
+.hero-circle[data-astro-cid-nlow4r3u],
+.hero-circle[data-astro-cid-5luozhpp] {
+  align-self: flex-end;
+  margin-top:  -5% !important;
+  transform: rotate(-2.5deg);
+  margin-inline-end: 10% !important;
+}
+
+@media (max-width: 1024px) {
+  .hero-circle[data-astro-cid-nlow4r3u],
+  .hero-circle[data-astro-cid-5luozhpp] {
+    margin-top: -10% !important;
+  }
+}
+
+[dir="rtl"] .hero-circle[data-astro-cid-5luozhpp] {
+  margin-inline-end: 15% !important;
+  margin-inline-start: auto !important;
+  align-self: flex-end !important;
+}
+
+/* Keep text inside the circle centered (avoid being pushed to bottom by flex/margins) */
+.hero-circle-inner[data-astro-cid-nlow4r3u],
+.hero-circle-inner[data-astro-cid-5luozhpp] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+  min-height: 100% !important;
+  box-sizing: border-box !important;
 }
 
 /* Hero bg-video height – ~567px, cap at 570px (override 75vh / min-height 650px) */

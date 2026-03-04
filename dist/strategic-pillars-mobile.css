@@ -61,12 +61,12 @@
     display: none;
   }
 
-  /* Icon: exact #CCE5E0 when closed, white when open. Paths relative to this CSS file so they work on both / and /ar/ */
+  /* Icon: exact #3cdbc04dwhen closed, white when open. Paths relative to this CSS file so they work on both / and /ar/ */
   .strategic-pillars-mobile .spm-icon {
     flex-shrink: 0;
     width: 36px;
     height: 36px;
-    background-color: #68C0B5;
+    background-color: #3cdbc0;
     -webkit-mask-size: contain;
     mask-size: contain;
     -webkit-mask-repeat: no-repeat;
@@ -123,7 +123,7 @@
     justify-content: center;
     width: 14px;
     height: 8px;
-    color: #68C0B5;
+    color: #3cdbc0;
     transition: transform 0.3s ease, color 0.25s ease;
   }
 

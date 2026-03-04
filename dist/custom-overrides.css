@@ -410,7 +410,7 @@ section h2:first-child {
 #group-results .result-element > .counter,
 #group-results .result-element > .counter-finish {
   font: normal normal bold 35px/20px Rubik !important;
-  color:#68C0B5 !important;
+  color:#3cdbc0 !important;
 }
 
 /* Progress bar counters - keep original styling or set different values */
@@ -421,11 +421,11 @@ section h2:first-child {
 
 /* Progress bar colors - 2025 (current year) and 2024 (previous year) */
 #group-results .progress-bar:not(.previous-year) {
-  background-color: #68C0B5 !important;
+  background-color: #3cdbc0 !important;
 }
 
 #group-results .progress-bar.previous-year {
-  background-color: #CCE5E0 !important;
+  background-color: #3cdbc04d!important;
 }
 
 /* Ensure progress-year doesn't overlap or cover the progress bar */
@@ -531,13 +531,13 @@ section h2:first-child {
   transform: translateY(-50%) !important; /* Center vertically */
   height: 36px !important; /* Slightly taller than the 30px pill */
   width: 3px !important; /* Vertical line */
-  background-color: #68C0B5 !important; /* Same color as progress bar (2025) */
+  background-color: #3cdbc0 !important; /* Same color as progress bar (2025) */
   z-index: 2 !important;
 }
 
 /* Marker color for previous year progress bars */
 #group-results .progress-bar-wrapper:has(.progress-bar.previous-year)::before {
-  background-color: #CCE5E0 !important; /* Same color as previous year progress bar */
+  background-color: #3cdbc04d!important; /* Same color as previous year progress bar */
 }
 
 /* RTL support for Arabic - marker on right side, rounded on left */

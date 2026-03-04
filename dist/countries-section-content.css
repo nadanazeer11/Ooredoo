@@ -253,7 +253,7 @@
 
 /* Large customers number (e.g. 2,988) */
 .markets-content .customers-counter {
-  color: #68C0B5 !important;
+  color: #3cdbc0 !important;
 }
 
 /* RTL: align with pill start (pill is on the right in RTL) */
@@ -300,6 +300,19 @@
   text-align: flex-end !important;
 }
 
+/* Operator importance counter number – adjust font-size as needed */
+.markets-content .importance-counter .counter,
+.markets-content .importance-counter .counter.counter-finish {
+  font-size: 30px !important;
+} 
+
+@media (min-width: 1024px) {
+  .markets-content .importance-counter .counter,
+  .markets-content .importance-counter .counter.counter-finish {
+    font-size: 36px !important;
+  }
+}
+
 /* -------------------------------------------------------------------------
    Financial performance section. Force dark text in cells (Oman/Tunisia use --textColor:#fff).
    Table divider color: #BFBFBF in all countries (override var(--borderColor)).
@@ -324,10 +337,10 @@
   color: #000000 !important;
 }
 
-/* Last column (current year): teal #68C0B5 for data cells only (override var(--bgColorOpacity)). */
+/* Last column (current year): teal #3cdbc0 for data cells only (override var(--bgColorOpacity)). */
 .markets-content .market-content-right-inner-bottom .divTableCell:last-child,
 .markets-content .market-content-right-inner-bottom .divTableHead:last-child {
-  background-color: #68C0B5 !important;
+  background-color: #3cdbc0 !important;
   font-weight: 700 !important;
 }
 
@@ -442,20 +455,20 @@
   transform: translateY(-50%) !important;
   height: 36px !important;
   width: 3px !important;
-  background-color: #68C0B5 !important;
+  background-color: #3cdbc0 !important;
   z-index: 2 !important;
 }
 
 .markets-content .result-years-item.previous-years .progress-bar-wrapper::before,
 .markets-content .result-years-item-mbl.previous-years .progress-bar-wrapper::before,
 .markets-content .progress-bar-wrapper:has(.progress-bar.previous-years)::before {
-  background-color: #CCE5E0 !important;
+  background-color: #3cdbc04d!important;
 }
 
 /* Last year vertical line – teal (after previous-years so it wins when bar has .previous-years in AR) */
 .markets-content .result-years-item.last-year .progress-bar-wrapper::before,
 .markets-content .result-years-item-mbl.last-year .progress-bar-wrapper::before {
-  background-color: #68C0B5 !important;
+  background-color: #3cdbc0 !important;
 }
 
 /* Tube bar – dynamic width from --bar-width (inherited from .result-years-item); bar starts at same place, ends at different widths. Support desktop typo --bar---bar-width. */
@@ -501,13 +514,13 @@
 .markets-content .result-years-item .progress-bar.previous-years,
 .markets-content .result-years-item-mbl.previous-years .progress-bar,
 .markets-content .result-years-item-mbl .progress-bar.previous-years {
-  background-color: #CCE5E0 !important;
+  background-color: #3cdbc04d!important;
 }
 
-/* Last year bar always #68C0B5 (after previous-years so it wins when bar has .previous-years in AR) */
+/* Last year bar always #3cdbc0 (after previous-years so it wins when bar has .previous-years in AR) */
 .markets-content .result-years-item.last-year .progress-bar,
 .markets-content .result-years-item-mbl.last-year .progress-bar {
-  background-color: #68C0B5 !important;
+  background-color: #3cdbc0 !important;
 }
 
 /* RTL – marker on right, rounded on left; text at end (left in RTL) */
@@ -585,13 +598,19 @@
 
 /* Big number (customers) – teal like desktop, not var(--textColor) */
 #country-performance .accordion-content .customers-counter {
-  color: #68C0B5 !important;
+  color: #3cdbc0 !important;
 }
 
 /* Importance counter – black like desktop, not country color (e.g. yellow in Qatar) */
 #country-performance .accordion-content .importance-counter,
 #country-performance .accordion-content .importance-counter .counter {
   color: #000000 !important;
+}
+
+/* Operator importance counter font-size (mobile/accordion) */
+#country-performance .accordion-content .importance-counter .counter,
+#country-performance .accordion-content .importance-counter .counter.counter-finish {
+  font-size: 24px !important;
 }
 
 /* Importance section title and row labels – black (Oman/Tunisia use white --textColor) */
@@ -611,10 +630,10 @@
   color: #000000 !important;
 }
 
-/* Last column (current year): teal #68C0B5 for data cells (override country color) */
+/* Last column (current year): teal #3cdbc0 for data cells (override country color) */
 #country-performance .divTableMbl .divTableCell:last-child,
 #country-performance .divTableMbl .divTableHead:last-child {
-  background-color: #68C0B5 !important;
+  background-color: #3cdbc0 !important;
   font-weight: 700 !important;
 }
 
@@ -625,7 +644,7 @@
   color: #FFFFFF !important;
 }
 
-/* Last year row – no extra bg/color from build (override var(--textColor) / var(--colorTextFirstResult)); bar is #68C0B5 only */
+/* Last year row – no extra bg/color from build (override var(--textColor) / var(--colorTextFirstResult)); bar is #3cdbc0 only */
 #country-performance .accordion-content .last-year,
 #country-performance .accordion-content .result-years-item-mbl.last-year {
   background-color: transparent !important;
@@ -657,17 +676,17 @@
   transform: translateY(-50%) !important;
   height: 36px !important;
   width: 3px !important;
-  background-color: #68C0B5 !important;
+  background-color: #3cdbc0 !important;
   z-index: 2 !important;
 }
 
 #country-performance .accordion-content .result-years-item-mbl.previous-years .progress-bar-wrapper::before,
 #country-performance .accordion-content .progress-bar-wrapper:has(.progress-bar.previous-years)::before {
-  background-color: #CCE5E0 !important;
+  background-color: #3cdbc04d!important;
 }
 
 #country-performance .accordion-content .result-years-item-mbl.last-year .progress-bar-wrapper::before {
-  background-color: #68C0B5 !important;
+  background-color: #3cdbc0 !important;
 }
 
 #country-performance .accordion-content .progress-bar {
@@ -692,11 +711,11 @@
 
 #country-performance .accordion-content .result-years-item-mbl.previous-years .progress-bar,
 #country-performance .accordion-content .progress-bar.previous-years {
-  background-color: #CCE5E0 !important;
+  background-color: #3cdbc04d!important;
 }
 
 #country-performance .accordion-content .result-years-item-mbl.last-year .progress-bar {
-  background-color: #68C0B5 !important;
+  background-color: #3cdbc0 !important;
 }
 
 #country-performance .accordion-content .result-years-item-mbl.last-year .progress-bar .counter,

@@ -15,6 +15,16 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     loadSection('esg', './sections/esg-section.html');
   }
+
+  // Strategy growth engine cards: click toggles accordion (mobile) / sticky open (desktop)
+  const strategySection = document.getElementById('our-strategy');
+  if (strategySection) {
+    strategySection.querySelectorAll('.strategy-engine').forEach(function(card) {
+      card.addEventListener('click', function() {
+        this.classList.toggle('is-open');
+      });
+    });
+  }
 });
 
 /**

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1279" height="82" viewBox="0 0 1279 82">
+  <g id="Group_286" data-name="Group 286" transform="translate(-324 -528)">
+    <rect id="Rectangle_111" data-name="Rectangle 111" width="415" height="82" rx="32" transform="translate(1188 528)" fill="#39dcbf"/>
+    <rect id="Rectangle_109" data-name="Rectangle 109" width="439" height="82" transform="translate(788 528)" fill="#0047ba"/>
+    <path id="Rectangle_112" data-name="Rectangle 112" d="M32,0H547a0,0,0,0,1,0,0V82a0,0,0,0,1,0,0H32A32,32,0,0,1,0,50V32A32,32,0,0,1,32,0Z" transform="translate(324 528)" fill="#ed1c24"/>
+    <text id="Core_Telco" data-name="Core Telco" transform="translate(370 556)" fill="#fff" font-size="22" font-family="Rubik" font-weight="700"><tspan x="0" y="21">Core Telco</tspan></text>
+    <text id="Digital_Infrastructure" data-name="Digital Infrastructure" transform="translate(949 556)" fill="#fff" font-size="22" font-family="Rubik" font-weight="700"><tspan x="0" y="21">Digital Infrastructure</tspan></text>
+    <text id="Platform_Adjacencies" data-name="Platform Adjacencies" transform="translate(1296 556)" font-size="22" font-family="Rubik" font-weight="700"><tspan x="0" y="21">Platform Adjacencies</tspan></text>
+    <path id="Polygon_2" data-name="Polygon 2" d="M41,0,82,16H0Z" transform="translate(887 528) rotate(90)" fill="#ed1c24"/>
+    <path id="Polygon_3" data-name="Polygon 3" d="M41,0,82,16H0Z" transform="translate(1243 528) rotate(90)" fill="#0047ba"/>
+  </g>
+</svg>

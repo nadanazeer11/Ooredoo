@@ -332,14 +332,315 @@ section h2:first-child {
   display: none !important;
 }
 
-/* Strategy section - increase title div height and remove icons */
-#our-strategy .cards-inner {
-  min-height: 120px !important;
-  padding-bottom: 40px !important;
+/* Strategy section - evolved layout (three growth engines + four enablers) */
+#our-strategy .strategy-evolved {
+  border-radius: 24px !important;
+  /* border: 2px solid #ED1C24 !important; */
+  /* border-top-width: 6px !important; */
+  /* padding: 40px 36px 44px !important; */
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
-#our-strategy .cards__element-title .svg-icon {
+#our-strategy .strategy-growth-title {
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  color: #1a1a1a !important;
+  margin: 0 0 20px 0 !important;
+  line-height: 1.3 !important;
+}
+
+#our-strategy .strategy-rise-row {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin-bottom: 24px !important;
+  padding: 14px 24px !important;
+  background: #ED1C24 !important;
+  border-radius: 9999px !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.02em !important;
+  color: #fff !important;
+  box-sizing: border-box !important;
+}
+
+#our-strategy .strategy-rise-label {
+  flex: 1 !important;
+  text-align: center !important;
+  color: #fff !important;
+  font-weight: 400 !important;
+}
+
+#our-strategy .strategy-rise-label::first-letter {
+  font-weight: 700 !important;
+  font-size: 1.1em !important;
+}
+
+#our-strategy .strategy-growth-engines {
+  display: flex !important;
+  gap: 20px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 32px !important;
+}
+
+#our-strategy .strategy-engine {
+  flex: 1 !important;
+  min-width: 240px !important;
+  min-height: 280px !important;
+  background: #fff !important;
+  border-radius: 16px !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  position: relative !important;
+  overflow: hidden !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease !important;
+}
+
+/* Default view: title centered, chevron on the right */
+#our-strategy .strategy-engine-default {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 24px 48px 24px 24px !important;
+  min-height: 280px !important;
+  box-sizing: border-box !important;
+  transition: opacity 0.3s ease !important;
+  position: relative !important;
+}
+
+#our-strategy .strategy-engine-default h4 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #1a1a1a !important;
+  margin: 0 !important;
+  text-align: center !important;
+  
+}
+
+/* Chevron: hidden on desktop, shown on mobile (accordion) */
+#our-strategy .strategy-engine-chevron {
   display: none !important;
+}
+
+#our-strategy .strategy-engine-chevron svg {
+  display: block !important;
+}
+
+[dir="rtl"] #our-strategy .strategy-engine-default {
+  padding: 24px 24px 24px 48px !important;
+}
+
+/* Flipped view: title + description (hidden by default) */
+#our-strategy .strategy-engine-content {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  padding: 24px !important;
+  box-sizing: border-box !important;
+  overflow: auto !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.3s ease, visibility 0.3s ease !important;
+  text-align: center !important;
+}
+
+#our-strategy .strategy-engine:hover .strategy-engine-content,
+#our-strategy .strategy-engine.is-open .strategy-engine-content {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+#our-strategy .strategy-engine:hover .strategy-engine-default,
+#our-strategy .strategy-engine.is-open .strategy-engine-default {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  position: absolute !important;
+  pointer-events: none !important;
+}
+
+#our-strategy .strategy-engine-content h4 {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #1a1a1a !important;
+  margin: 0 0 12px 0 !important;
+}
+
+#our-strategy .strategy-engine-content p {
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+  color: #333 !important;
+  margin: 0 !important;
+}
+
+/* When flipped (hover or open): red background and white text for all cards */
+#our-strategy .strategy-engine:hover,
+#our-strategy .strategy-engine.is-open {
+  background: #ED1C24 !important;
+}
+
+/* Desktop only: white text when flipped (hover or is-open) – not for mobile */
+@media (min-width: 769px) {
+  #our-strategy .strategy-engine:hover .strategy-engine-default h4,
+  #our-strategy .strategy-engine:hover .strategy-engine-content h4,
+  #our-strategy .strategy-engine:hover .strategy-engine-content p,
+  #our-strategy .strategy-engine.is-open .strategy-engine-default h4,
+  #our-strategy .strategy-engine.is-open .strategy-engine-content h4,
+  #our-strategy .strategy-engine.is-open .strategy-engine-content p {
+    color: #fff !important;
+  }
+}
+
+/* #our-strategy .strategy-engine:hover .strategy-engine-chevron,
+#our-strategy .strategy-engine.is-open .strategy-engine-chevron {
+  color: #fff !important;
+} */
+
+/* Desktop only: hover flip + chevron rotate (chevron hidden so no visible change) */
+@media (min-width: 769px) {
+  #our-strategy .strategy-engine.is-open .strategy-engine-chevron,
+  #our-strategy .strategy-engine:hover .strategy-engine-chevron {
+    transform: translateY(-50%) rotate(180deg) !important;
+  }
+}
+
+#our-strategy .strategy-divider {
+  border: none !important;
+  border-top: 1px solid #ccc !important;
+  margin: 28px 0 24px 0 !important;
+}
+
+#our-strategy .strategy-enablers-title {
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  color: #1a1a1a !important;
+  margin: 0 0 20px 0 !important;
+  line-height: 1.35 !important;
+}
+
+#our-strategy .strategy-enablers {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 16px !important;
+}
+
+#our-strategy .strategy-enabler {
+  flex: 1 !important;
+  min-width: 160px !important;
+  min-height: 60px !important;
+  background: #ED1C24 !important;
+  border-radius: 24px !important;
+  padding: 16px 20px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: #fff !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+@media (max-width: 768px) {
+  #our-strategy .strategy-growth-title {
+    font-size: 19px !important;
+  }
+  #our-strategy .strategy-enablers-title {
+    font-size: 19px !important;
+  }
+  #our-strategy .strategy-rise-row {
+    font-size: 13px !important;
+    padding: 14px 14px !important;
+  }
+  #our-strategy .strategy-growth-engines {
+    flex-direction: column !important;
+  }
+  #our-strategy .strategy-engine {
+    min-width: 100% !important;
+    min-height: 52px !important;
+    overflow: visible !important;
+  }
+  /* Mobile: show chevron, accordion row (title + chevron) */
+  #our-strategy .strategy-engine-chevron {
+    display: block !important;
+    position: static !important;
+    flex-shrink: 0 !important;
+    transition: transform 0.3s ease !important;
+  }
+  #our-strategy .strategy-engine-default {
+    width: 100% !important;
+    min-height: 52px !important;
+    padding: 14px 20px !important;
+    justify-content: space-between !important;
+  }
+  #our-strategy .strategy-engine-default h4 {
+    text-align: left !important;
+  }
+  [dir="rtl"] #our-strategy .strategy-engine-default h4 {
+    text-align: right !important;
+  }
+  /* Mobile: content hidden by default, in flow so height can grow when open */
+  #our-strategy .strategy-engine-content {
+    position: static !important;
+    display: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    padding: 0 20px 16px 20px !important;
+    text-align: left !important;
+  }
+  [dir="rtl"] #our-strategy .strategy-engine-content {
+    text-align: right !important;
+  }
+  #our-strategy .strategy-engine-content h4 {
+    display: none !important;
+  }
+  /* Mobile: disable hover flip – only .is-open expands */
+  #our-strategy .strategy-engine:hover {
+    background: #fff !important;
+  }
+  #our-strategy .strategy-engine:hover .strategy-engine-default {
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative !important;
+    pointer-events: auto !important;
+  }
+  #our-strategy .strategy-engine:hover .strategy-engine-content {
+    display: none !important;
+  }
+  /* Mobile: expanded state – show content, rotate chevron, red bg, height grows with content */
+  #our-strategy .strategy-engine.is-open {
+    background: #ED1C24 !important;
+  }
+  #our-strategy .strategy-engine.is-open .strategy-engine-default {
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative !important;
+    pointer-events: auto !important;
+  }
+  #our-strategy .strategy-engine.is-open .strategy-engine-chevron {
+    transform: rotate(180deg) !important;
+    color: #fff !important;
+  }
+  #our-strategy .strategy-engine.is-open .strategy-engine-default h4 {
+    color: #fff !important;
+  }
+  #our-strategy .strategy-engine.is-open .strategy-engine-content {
+    display: block !important;
+  }
+  #our-strategy .strategy-engine.is-open .strategy-engine-content p {
+    color: #fff !important;
+  }
+  #our-strategy .strategy-enablers {
+    flex-direction: column !important;
+  }
+  #our-strategy .strategy-enabler {
+    min-width: 100% !important;
+  }
 }
 
 /* Remove margin-bottom from strategy section at 1023px breakpoint */
